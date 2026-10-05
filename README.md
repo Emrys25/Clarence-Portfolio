@@ -1,13 +1,13 @@
-# Clarence Ruwizhi — Personal Portfolio
+# Clarence Ruwizhi, Personal Portfolio
 
 A multidisciplinary creative portfolio showcasing work across graphic design, branding, web development, photography, video, product design and print production.
 
 ## 🎨 Built With
 
-- **HTML5** — Semantic markup
-- **CSS3** — Custom properties, Grid, Flexbox
-- **Vanilla JavaScript** — No frameworks, no dependencies
-- **Google Fonts** — Inter + Playfair Display
+- **HTML5**, Semantic markup
+- **CSS3**, Custom properties, Grid, Flexbox
+- **Vanilla JavaScript**, No frameworks, no dependencies
+- **Google Fonts**, Inter + Playfair Display
 
 ## 🎯 Features
 
