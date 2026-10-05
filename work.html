@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio, Graphic design, branding, web development, photography, video, product design and print production work.">
+    <title>Work, Clarence Ruwizhi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header" id="site-header">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <a href="index.html" class="nav-logo" aria-label="Home">
+                <span class="logo-text">Your Name</span>
+                <span class="logo-mark">◆</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="work.html" class="nav-link active" aria-current="page">Work</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="cv.html" class="btn btn-nav-cv">Download CV</a>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                <li><a href="work.html" class="mobile-nav-link active">Work</a></li>
+                <li><a href="experience.html" class="mobile-nav-link">Experience</a></li>
+                <li><a href="skills.html" class="mobile-nav-link">Skills</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                <li><a href="cv.html" class="mobile-nav-link mobile-cv-link">Download CV</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content reveal-up">
+                    <span class="section-label">Portfolio</span>
+                    <h1 class="page-title">Selected Work</h1>
+                    <p class="page-subtitle">A curated collection of projects across design, digital, photography and production disciplines.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="work-portfolio section-padding">
+            <div class="container">
+
+                <!-- Filter -->
+                <div class="portfolio-filter reveal-up" role="tablist" aria-label="Filter projects">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+                    <button class="filter-btn" data-filter="branding" role="tab" aria-selected="false">Branding</button>
+                    <button class="filter-btn" data-filter="graphic-design" role="tab" aria-selected="false">Graphic Design</button>
+                    <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web</button>
+                    <button class="filter-btn" data-filter="photography" role="tab" aria-selected="false">Photography</button>
+                    <button class="filter-btn" data-filter="video" role="tab" aria-selected="false">Video</button>
+                    <button class="filter-btn" data-filter="product" role="tab" aria-selected="false">Product</button>
+                    <button class="filter-btn" data-filter="print" role="tab" aria-selected="false">Print</button>
+                </div>
+
+                <!-- Full Portfolio Grid -->
+                <div class="portfolio-grid portfolio-grid-full" id="portfolio-grid">
+
+                    <article class="project-card project-featured reveal-up" data-category="branding">
+                        <a href="projects/branding-sample.html" class="project-link">
+                            <div class="project-image">
+                                <div class="project-placeholder placeholder-branding"><span>Brand Identity Project</span></div>
+                                <div class="project-overlay"><span class="project-view">View Project</span></div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">
+                                    <span class="project-category category-branding">Branding & Identity</span>
+                                    <span class="project-year">2024</span>
+                                </div>
+                                <h3 class="project-title">Complete Brand Identity System</h3>
+                                <p class="project-excerpt">Full visual identity including logo, colour palette, typography, stationery and brand guidelines.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal-up" data-category="web">
+                        <a href="projects/website-sample.html" class="project-link">
+                            <div class="project-image">
+                                <div class="project-placeholder placeholder-web"><span>Website Project</span></div>
+                                <div class="project-overlay"><span class="project-view">View Project</span></div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">
+                                    <span class="project-category category-web">Web Design & Development</span>
+                                    <span class="project-year">2024</span>
+                                </div>
+                                <h3 class="project-title">Restaurant Website with Booking System</h3>
+                                <p class="project-excerpt">WordPress website with custom booking integration and responsive design.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal-up" data-category="graphic-design">
+                        <a href="#" class="project-link">
+                            <div class="project-image">
+                                <div class="project-placeholder placeholder-design"><span>Graphic Design</span></div>
+                                <div class="project-overlay"><span class="project-view">View Project</span></div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">
+                                    <span class="project-category category-design">Graphic Design</span>
+                                    <span class="project-year">2023</span>
+                                </div>
+                                <h3 class="project-title">Event Promotional Campaign</h3>
+                                <p class="project-excerpt">Posters, flyers, social media graphics and digital advertisements.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card project-wide reveal-up" data-category="photography">
+                        <a href="projects/photography-sample.html" class="project-link">
+                            <div class="project-image">
+                                <div class="project-placeholder placeholder-photo"><span>Photography</span></div>
+                                <div class="project-overlay"><span class="project-view">View Project</span></div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">
+                                    <span class="project-category category-photo">Photography</span>
+                                    <span class="project-year">2024</span>
+                                </div>
+                                <h3 class="project-title">Product & Lifestyle Photography</h3>
+                                <p class="project-excerpt">Commercial photography across food, beverage and lifestyle categories.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal-up" data-category="product">
+                        <a href="projects/product-sample.html" class="project-link">
+                            <div class="project-image">
+                                <div class="project-placeholder placeholder-product"><span>Product Design</span></div>
+                                <div class="project-overlay"><span class="project-view">View Project</span></div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">
+                                    <span class="project-category category-product">Product Design</span>
+                                    <span class="project-year">2023</span>
+                                </div>
+                                <h3 class="project-title">Sustainable Product Collection</h3>
+                                <p class="project-excerpt">Products developed from reclaimed and discarded materials.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal-up" data-category="print">
+                        <a href="projects/print-sample.html" class="project-link">
+                            <div class="project-image">
+                                <div class="project-placeholder placeholder-print"><span>Print Production</span></div>
+                                <div class="project-overlay"><span class="project-view">View Project</span></div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">
+                                    <span class="project-category category-print">Print & Production</span>
+                                    <span class="project-year">2023</span>
+                                </div>
+                                <h3 class="project-title">Large Format Signage & Materials</h3>
+                                <p class="project-excerpt">Design preparation, production management and quality control.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal-up" data-category="video">
+                        <a href="#" class="project-link">
+                            <div class="project-image">
+                                <div class="project-placeholder placeholder-video"><span class="video-play-icon">▶</span><span>Video Content</span></div>
+                                <div class="project-overlay"><span class="project-view">View Project</span></div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">
+                                    <span class="project-category category-video">Video & Content</span>
+                                    <span class="project-year">2024</span>
+                                </div>
+                                <h3 class="project-title">Promotional Video Content</h3>
+                                <p class="project-excerpt">Video editing, colour grading and content creation for social media.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal-up" data-category="branding">
+                        <a href="#" class="project-link">
+                            <div class="project-image">
+                                <div class="project-placeholder placeholder-branding"><span>Branding</span></div>
+                                <div class="project-overlay"><span class="project-view">View Project</span></div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">
+                                    <span class="project-category category-branding">Branding & Identity</span>
+                                    <span class="project-year">2023</span>
+                                </div>
+                                <h3 class="project-title">Café Visual Identity</h3>
+                                <p class="project-excerpt">Logo design, menu design, signage and brand application.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal-up" data-category="web">
+                        <a href="#" class="project-link">
+                            <div class="project-image">
+                                <div class="project-placeholder placeholder-web"><span>Website</span></div>
+                                <div class="project-overlay"><span class="project-view">View Project</span></div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">
+                                    <span class="project-category category-web">Web Design & Development</span>
+                                    <span class="project-year">2023</span>
+                                </div>
+                                <h3 class="project-title">Portfolio Website Design</h3>
+                                <p class="project-excerpt">WordPress website with custom Elementor design and responsive layout.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal-up" data-category="graphic-design">
+                        <a href="#" class="project-link">
+                            <div class="project-image">
+                                <div class="project-placeholder placeholder-design"><span>Menu Design</span></div>
+                                <div class="project-overlay"><span class="project-view">View Project</span></div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-meta">
+                                    <span class="project-category category-design">Graphic Design</span>
+                                    <span class="project-year">2023</span>
+                                </div>
+                                <h3 class="project-title">Restaurant Menu Collection</h3>
+                                <p class="project-excerpt">Menu design, layout and print preparation for multiple restaurant concepts.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="copyright">&copy; <span id="current-year">2024</span> Clarence Ruwizhi. All rights reserved.</p>
+                <p class="footer-honvria">Visual identity by <a href="#">Honvria Studio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+</html>
