@@ -33,4 +33,4 @@ A multidisciplinary creative portfolio showcasing work across graphic design, br
 | Burgundy | `#630607` | Category accent |
 | Gold | `#C1A162` | Premium details |
 
-## 📁 Project Structure
+
