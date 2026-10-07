@@ -95,6 +95,13 @@
             <div class="container">
                 <div class="cv-document" id="cv-document">
 
+                    <!-- PDF Only Header (Hidden on website, shows on downloaded PDF) -->
+                    <div class="cv-pdf-header" style="margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #000080;">
+                        <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: 22pt; color: #000080; margin: 0 0 4px 0;">Clarence Ruwizhi</h1>
+                        <p style="font-size: 10pt; color: #555; margin: 0;">Creative and Multimedia Professional | Stellenbosch / Cape Town, South Africa</p>
+                        <p style="font-size: 9pt; color: #666; margin: 4px 0 0 0;">https://emrys25.github.io/Clarence-Portfolio/ | https://emrys25.github.io/Clarence-Portfolio/</p>
+                    </div>
+
                     <!-- Profile -->
                     <div class="cv-block">
                         <h2 class="cv-heading">Professional Profile</h2>
@@ -217,7 +224,6 @@
                         <div class="cv-entry">
                             <div class="cv-entry-header">
                                 <h3 class="cv-entry-title">National Senior Certificate / Matric</h3>
-                                <h3 class="cv-entry-title">Kayamandi High School, South Africa</h3>
                                 <span class="cv-entry-meta">South Africa</span>
                             </div>
                         </div>
@@ -238,6 +244,7 @@
                         <p><strong>Languages:</strong> English (Fluent), IsiXhosa (Secondary), Shona (Native)</p>
                         <p><strong>References:</strong> <br>COFFEEMM / LimeInc.  <b>Mhlengi Ngcobo</b> - +27 74 441 3704 / +27 61 585 6624 <br> LillyLoompa <b>Lizl Naude</b> - +27 82 320 5589</p>
                     </div>
+
 
                 </div>
 
@@ -261,24 +268,84 @@
 
     <script src="js/main.js"></script>
 
-    <!-- Script to trigger PDF Generation -->
+    <!-- Script to trigger PDF Generation cleanly -->
     <script>
         function generatePDF() {
             const element = document.getElementById('cv-document');
+            const buttons = [
+                document.getElementById('download-pdf-btn'),
+                document.getElementById('bottom-download-pdf-btn'),
+                document.getElementById('top-download-pdf-btn')
+            ];
+
+            // Show loading state on buttons
+            buttons.forEach(btn => {
+                if (btn) {
+                    btn.disabled = true;
+                    btn.dataset.originalText = btn.innerHTML;
+                    btn.innerHTML = 'Generating PDF...';
+                }
+            });
+
+            // Add class to trigger PDF-specific CSS
+            document.body.classList.add('generating-pdf');
+
             const opt = {
-                margin:       10,
+                margin:       [10, 12, 10, 12],
                 filename:     'Clarence-Ruwizhi-CV.pdf',
                 image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2 },
-                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                html2canvas:  {
+                    scale: 2,
+                    useCORS: true,
+                    letterRendering: true,
+                    scrollY: 0
+                },
+                jsPDF: {
+                    unit: 'mm',
+                    format: 'a4',
+                    orientation: 'portrait'
+                },
+                pagebreak: {
+                    mode: ['css', 'legacy'],
+                    avoid: ['.cv-block', '.cv-entry', '.cv-skill-group', '.cv-heading']
+                }
             };
 
-            html2pdf().set(opt).from(element).save();
+            html2pdf()
+                .set(opt)
+                .from(element)
+                .save()
+                .then(() => {
+                    // Remove PDF mode CSS
+                    document.body.classList.remove('generating-pdf');
+                    // Reset buttons
+                    buttons.forEach(btn => {
+                        if (btn) {
+                            btn.disabled = false;
+                            btn.innerHTML = btn.dataset.originalText;
+                        }
+                    });
+                })
+                .catch(() => {
+                    document.body.classList.remove('generating-pdf');
+                    buttons.forEach(btn => {
+                        if (btn) {
+                            btn.disabled = false;
+                            btn.innerHTML = btn.dataset.originalText;
+                        }
+                    });
+                    alert('PDF generation failed. Please try printing instead.');
+                });
         }
 
-        document.getElementById('download-pdf-btn').addEventListener('click', generatePDF);
-        document.getElementById('bottom-download-pdf-btn').addEventListener('click', generatePDF);
-        document.getElementById('top-download-pdf-btn').addEventListener('click', generatePDF);
+        const downloadBtn = document.getElementById('download-pdf-btn');
+        const bottomBtn = document.getElementById('bottom-download-pdf-btn');
+        const topBtn = document.getElementById('top-download-pdf-btn');
+
+        if (downloadBtn) downloadBtn.addEventListener('click', generatePDF);
+        if (bottomBtn) bottomBtn.addEventListener('click', generatePDF);
+        if (topBtn) topBtn.addEventListener('click', generatePDF);
     </script>
 </body>
 </html>
+

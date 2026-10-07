@@ -1005,6 +1005,10 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--gray-200);
 }
 
+.cv-pdf-header {
+    display: none;
+}
+
 .cv-block {
     margin-bottom: var(--space-3xl);
     padding-bottom: var(--space-2xl);
@@ -1368,13 +1372,169 @@ h1, h2, h3, h4, h5, h6 {
     .timeline-item { grid-template-columns: 1fr; gap: var(--space-xs); }
 }
 
-@media print {
-    .site-header, .site-footer, .page-header, .cv-download-header, .cv-download-bottom, .btn, .skip-link {
-        display: none !important;
-    }
-    body { background: white; color: black; font-size: 11pt; }
-    .cv-document { box-shadow: none; border: none; padding: 0; }
-    .cv-heading { color: black; border-color: black; }
+/* ============================================
+   PDF / PRINT OPTIMISATION
+   ============================================ */
+
+/* Used only while generating the PDF */
+body.generating-pdf .site-header,
+body.generating-pdf .page-header,
+body.generating-pdf .cv-download-header,
+body.generating-pdf .cv-download-bottom,
+body.generating-pdf .site-footer,
+body.generating-pdf .skip-link,
+body.generating-pdf .btn {
+    display: none !important;
 }
 
-.project-card.hidden { display: none; }
+body.generating-pdf {
+    background: white !important;
+}
+
+body.generating-pdf .cv-section {
+    padding: 0 !important;
+}
+
+body.generating-pdf .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+body.generating-pdf .cv-document {
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+}
+
+body.generating-pdf .cv-pdf-header {
+    display: block !important;
+}
+
+/* Keep blocks together, avoid mid-card cuts */
+body.generating-pdf .cv-block,
+body.generating-pdf .cv-entry,
+body.generating-pdf .cv-skill-group,
+body.generating-pdf .cv-skills-grid {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+}
+
+body.generating-pdf .cv-heading {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+}
+
+body.generating-pdf .cv-entry-header {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+}
+
+/* Tighter spacing for PDF */
+body.generating-pdf .cv-block {
+    margin-bottom: 14px !important;
+    padding-bottom: 10px !important;
+    border-bottom: 1px solid #ddd !important;
+}
+
+body.generating-pdf .cv-heading {
+    font-size: 16pt !important;
+    margin-bottom: 8px !important;
+    padding-bottom: 3px !important;
+    color: #000080 !important;
+    border-bottom: 1.5px solid #9456ED !important;
+}
+
+body.generating-pdf .cv-profile-text,
+body.generating-pdf .cv-entry-list li,
+body.generating-pdf .cv-skill-group p,
+body.generating-pdf p {
+    font-size: 10pt !important;
+    line-height: 1.45 !important;
+    color: #222 !important;
+}
+
+body.generating-pdf .cv-entry-title {
+    font-size: 12pt !important;
+}
+
+body.generating-pdf .cv-entry-meta {
+    font-size: 9pt !important;
+}
+
+body.generating-pdf .cv-subheading {
+    font-size: 9pt !important;
+}
+
+body.generating-pdf .cv-skills-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+}
+
+body.generating-pdf .cv-skill-group {
+    padding: 8px 10px !important;
+    background: #f7f7f5 !important;
+    border-left: 3px solid #9456ED !important;
+    box-shadow: none !important;
+}
+
+body.generating-pdf .cv-entry {
+    margin-bottom: 10px !important;
+}
+
+body.generating-pdf .cv-entry-list li {
+    margin-bottom: 2px !important;
+    padding-left: 14px !important;
+}
+
+/* Standard browser print (Ctrl+P) */
+@media print {
+    .site-header,
+    .page-header,
+    .cv-download-header,
+    .cv-download-bottom,
+    .site-footer,
+    .skip-link,
+    .btn {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 10pt !important;
+    }
+
+    .cv-section {
+        padding: 0 !important;
+    }
+
+    .cv-document {
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .cv-pdf-header {
+        display: block !important;
+    }
+
+    .cv-block,
+    .cv-entry,
+    .cv-skill-group {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    .cv-heading {
+        page-break-after: avoid !important;
+        color: black !important;
+        border-color: #333 !important;
+    }
+}
