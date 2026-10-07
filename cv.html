@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Curriculum Vitae, Clarence Ruwizhi. Creative & Multimedia Professional based in Stellenbosch, Cape Town.">
-    <title>CV, Clarence Ruwizhi</title>
+    <meta name="description" content="Curriculum Vitae, Clarence Emrys Lion. Creative and Multimedia Professional based in Stellenbosch, Cape Town.">
+    <title>CV, Clarence Emrys Lion</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="css/animations.css">
     
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+    <!-- Automatic HTML to PDF Converter Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
 
@@ -38,7 +41,7 @@
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
-                <a href="cv.html" class="btn btn-nav-cv active" aria-current="page">Download CV</a>
+                <button id="top-download-pdf-btn" class="btn btn-nav-cv">Download CV</button>
                 <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -65,15 +68,15 @@
             <div class="container">
                 <div class="page-header-content reveal-up">
                     <span class="section-label">Curriculum Vitae</span>
-                    <h1 class="page-title">Clarence Ruwizhi</h1>
-                    <p class="page-subtitle">Creative & Multimedia Professional | Digital Creative | Web & Brand Design<br>Stellenbosch / Cape Town, Western Cape, South Africa</p>
+                    <h1 class="page-title">Clarence Emrys Lion</h1>
+                    <p class="page-subtitle">Creative and Multimedia Professional | Digital Creative | Web and Brand Design<br>Stellenbosch / Cape Town, Western Cape, South Africa</p>
                     <div class="cv-download-header">
-                        <a href="assets/docs/Clarence-Ruwizhi-CV.pdf" class="btn btn-primary" download>
+                        <button id="download-pdf-btn" class="btn btn-primary">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                                 <path d="M8 2v9M4 8l4 4 4-4M2 13h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                             Download PDF
-                        </a>
+                        </button>
                         <button class="btn btn-secondary" onclick="window.print()">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                                 <rect x="4" y="1" width="8" height="4" stroke="currentColor" stroke-width="1.5"/>
@@ -90,10 +93,10 @@
         <!-- CV CONTENT DOCUMENT -->
         <section class="cv-section section-padding">
             <div class="container">
-                <div class="cv-document">
+                <div class="cv-document" id="cv-document">
 
                     <!-- Profile -->
-                    <div class="cv-block reveal-up">
+                    <div class="cv-block">
                         <h2 class="cv-heading">Professional Profile</h2>
                         <p class="cv-profile-text">
                             Creative and versatile digital professional with experience across graphic design, branding, web design, 
@@ -106,36 +109,36 @@
                     </div>
 
                     <!-- Key Skills -->
-                    <div class="cv-block reveal-up">
+                    <div class="cv-block">
                         <h2 class="cv-heading">Core Skills</h2>
                         <div class="cv-skills-grid">
                             <div class="cv-skill-group">
-                                <h3 class="cv-subheading">Creative & Design</h3>
-                                <p>Graphic Design · Brand Identity · Logo Design · Visual Communication · Layout · Poster & Flyer Design · Marketing Collateral · Social Media Design · Typography · Colour Development · Promotional Campaigns</p>
+                                <h3 class="cv-subheading">Creative and Design</h3>
+                                <p>Graphic Design · Brand Identity · Logo Design · Visual Communication · Layout · Poster and Flyer Design · Marketing Collateral · Social Media Design · Typography · Colour Development · Promotional Campaigns</p>
                             </div>
                             <div class="cv-skill-group">
-                                <h3 class="cv-subheading">Digital & Web</h3>
-                                <p>WordPress · Elementor · Website Design · Responsive Web Design · HTML/CSS Fundamentals · Website Structure & UX · Booking Systems · Plugin Configuration · Troubleshooting</p>
+                                <h3 class="cv-subheading">Digital and Web</h3>
+                                <p>WordPress · Elementor · Website Design · Responsive Web Design · HTML/CSS Fundamentals · Website Structure and UX · Booking Systems · Plugin Configuration · Troubleshooting</p>
                             </div>
                             <div class="cv-skill-group">
-                                <h3 class="cv-subheading">Production & Technical</h3>
+                                <h3 class="cv-subheading">Production and Technical</h3>
                                 <p>Print Preparation · Large-Format Printing · Prepress · File Preparation · Artwork Adaptation · Production Coordination · Photography · Videography · Digital Asset Management</p>
                             </div>
                             <div class="cv-skill-group">
                                 <h3 class="cv-subheading">Professional Skills</h3>
-                                <p>Creative Problem-Solving · Client Communication · Project Management · Independent Learning · Attention to Detail · Time Management · Adaptability · Team Collaboration · Training & Mentoring</p>
+                                <p>Creative Problem-Solving · Client Communication · Project Management · Independent Learning · Attention to Detail · Time Management · Adaptability · Team Collaboration · Training and Mentoring</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Experience -->
-                    <div class="cv-block reveal-up">
+                    <div class="cv-block">
                         <h2 class="cv-heading">Professional Experience</h2>
 
                         <div class="cv-entry">
                             <div class="cv-entry-header">
                                 <h3 class="cv-entry-title">Founder / Creative Director</h3>
-                                <span class="cv-entry-meta">Honvria Studio · January 2026, Present</span>
+                                <span class="cv-entry-meta">Honvria Studio, January 2026, Present</span>
                             </div>
                             <ul class="cv-entry-list">
                                 <li>Developing and managing the studio's visual identity and brand presence</li>
@@ -147,8 +150,8 @@
 
                         <div class="cv-entry">
                             <div class="cv-entry-header">
-                                <h3 class="cv-entry-title">Independent Creative & Digital Projects</h3>
-                                <span class="cv-entry-meta">Freelance · 2025, Present</span>
+                                <h3 class="cv-entry-title">Independent Creative and Digital Projects</h3>
+                                <span class="cv-entry-meta">Freelance, 2025, Present</span>
                             </div>
                             <ul class="cv-entry-list">
                                 <li>Brand identity development, logo design, marketing material and social media graphics</li>
@@ -160,8 +163,8 @@
 
                         <div class="cv-entry">
                             <div class="cv-entry-header">
-                                <h3 class="cv-entry-title">Barista / Barista Training & Operations</h3>
-                                <span class="cv-entry-meta">Blauwklippen · Stellenbosch · 2024, Present</span>
+                                <h3 class="cv-entry-title">Barista / Barista Training and Operations</h3>
+                                <span class="cv-entry-meta">Blauwklippen, Stellenbosch, 2024, Present</span>
                             </div>
                             <ul class="cv-entry-list">
                                 <li>Prepared and served coffee to professional standards</li>
@@ -173,7 +176,7 @@
                         <div class="cv-entry">
                             <div class="cv-entry-header">
                                 <h3 class="cv-entry-title">Creative / Barista / Coffee Industry</h3>
-                                <span class="cv-entry-meta">CoffeeMM · Stellenbosch · 2023, Present</span>
+                                <span class="cv-entry-meta">CoffeeMM, Stellenbosch, 2023, Present</span>
                             </div>
                             <ul class="cv-entry-list">
                                 <li>Developed promotional material for Barista Battle events and campaigns</li>
@@ -184,8 +187,8 @@
 
                         <div class="cv-entry">
                             <div class="cv-entry-header">
-                                <h3 class="cv-entry-title">Designer & Printing Operator</h3>
-                                <span class="cv-entry-meta">LimeInc.Tech · Stellenbosch</span>
+                                <h3 class="cv-entry-title">Designer and Printing Operator</h3>
+                                <span class="cv-entry-meta">LimeInc.Tech, Stellenbosch</span>
                             </div>
                             <ul class="cv-entry-list">
                                 <li>Designed promotional and marketing materials, posters, flyers and signage</li>
@@ -195,18 +198,18 @@
                         </div>
                     </div>
 
-                    <!-- Software & Tools -->
-                    <div class="cv-block reveal-up">
-                        <h2 class="cv-heading">Software & Tools</h2>
+                    <!-- Software and Tools -->
+                    <div class="cv-block">
+                        <h2 class="cv-heading">Software and Tools</h2>
                         <p>Affinity · Adobe Photoshop · Adobe Illustrator · Canva · Blender · WordPress · Elementor · Microsoft Office · Google Workspace</p>
                     </div>
 
-                    <!-- Education & Development -->
-                    <div class="cv-block reveal-up">
-                        <h2 class="cv-heading">Education & Professional Development</h2>
+                    <!-- Education and Development -->
+                    <div class="cv-block">
+                        <h2 class="cv-heading">Education and Professional Development</h2>
                         <div class="cv-entry">
                             <div class="cv-entry-header">
-                                <h3 class="cv-entry-title">Self-Directed Creative & Digital Development</h3>
+                                <h3 class="cv-entry-title">Self-Directed Creative and Digital Development</h3>
                                 <span class="cv-entry-meta">2025, Present</span>
                             </div>
                             <p>Continuously developing practical skills through independent study, experimentation, client projects, and real-world implementation across graphic design, branding, web development, programming, photography, video, 3D design and print production.</p>
@@ -220,25 +223,25 @@
                     </div>
 
                     <!-- Career Interests -->
-                    <div class="cv-block reveal-up">
+                    <div class="cv-block">
                         <h2 class="cv-heading">Career Interests</h2>
                         <p>Creative Design · Multimedia Design · Digital Creative · Brand Design · Web Design · WordPress Development · Digital Content · Creative Technology · Marketing Design · Visual Communication · Multimedia Production · Junior Web Development</p>
                     </div>
 
-                    <!-- Contact & References -->
-                    <div class="cv-block reveal-up">
-                        <h2 class="cv-heading">Contact & Details</h2>
+                    <!-- Contact and Details -->
+                    <div class="cv-block">
+                        <h2 class="cv-heading">Contact and Details</h2>
                         <p><strong>Location:</strong> Stellenbosch / Cape Town, Western Cape, South Africa</p>
-                        <p><strong>Email:</strong> <a href="mailto:emryslion@proton.me">emryslion@proton.me</a></p>
-                        <p><strong>Portfolio:</strong> <a href="https://github.com/Emrys25">github.com/Emrys25</a></p>
-                        <p><strong>Languages:</strong> English (Fluent),Isixhosa, Shona(Fluent)</p>
+                        <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                        <p><strong>Portfolio:</strong> <a href="https://yourusername.github.io">yourusername.github.io</a></p>
+                        <p><strong>Languages:</strong> English (Fluent)</p>
                         <p><strong>References:</strong> Available upon request.</p>
                     </div>
 
                 </div>
 
-                <div class="cv-download-bottom reveal-up">
-                    <a href="assets/docs/Clarence-Ruwizhi-CV.pdf" class="btn btn-primary" download>Download CV as PDF</a>
+                <div class="cv-download-bottom">
+                    <button id="bottom-download-pdf-btn" class="btn btn-primary">Download CV as PDF</button>
                 </div>
             </div>
         </section>
@@ -249,12 +252,32 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-bottom">
-                <p class="copyright">&copy; <span id="current-year">2025</span> Clarence Ruwizhi. All rights reserved.</p>
+                <p class="copyright">&copy; <span id="current-year">2025</span> Clarence Emrys Lion. All rights reserved.</p>
                 <p class="footer-honvria">Visual identity by <a href="#">Honvria Studio</a></p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+
+    <!-- Script to trigger PDF Generation -->
+    <script>
+        function generatePDF() {
+            const element = document.getElementById('cv-document');
+            const opt = {
+                margin:       10,
+                filename:     'Clarence-Emrys-Lion-CV.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2 },
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            html2pdf().set(opt).from(element).save();
+        }
+
+        document.getElementById('download-pdf-btn').addEventListener('click', generatePDF);
+        document.getElementById('bottom-download-pdf-btn').addEventListener('click', generatePDF);
+        document.getElementById('top-download-pdf-btn').addEventListener('click', generatePDF);
+    </script>
 </body>
 </html>
