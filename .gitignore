@@ -1,0 +1,56 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+._*
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Dependencies (if you later add npm)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build output
+dist/
+build/
+.cache/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Original design/working files (keep private)
+*.psd
+*.ai
+*.sketch
+*.fig
+*.xd
+*.afdesign
+*.afphoto
+*.afpub
+working-files/
+drafts/
+
+# Private assets
+private/
+_private/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
