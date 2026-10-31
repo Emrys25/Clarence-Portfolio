@@ -1684,12 +1684,13 @@ body.generating-pdf .cv-entry-list li {
    ========================================== */
 
 .board-page-bg {
-  background-color: #2a2a2a; /* Dark background behind the poster */
+  background-color: #2a2a2a;
   padding-bottom: 60px;
 }
 
+/* Ensure wrapper clears the global fixed header */
 .board-wrapper {
-  padding: 40px 20px;
+  padding: 120px 20px 40px; /* 120px top padding pushes it below the global nav */
 }
 
 .brand-board {
@@ -1727,6 +1728,9 @@ body.generating-pdf .cv-entry-list li {
 }
 .p-0 {
   padding: 0 !important;
+}
+.mt-5 {
+  margin-top: 5px;
 }
 .mt-20 {
   margin-top: 20px;
@@ -1785,6 +1789,8 @@ body.generating-pdf .cv-entry-list li {
 }
 .col-values {
   width: 33.333%;
+  display: flex;
+  flex-direction: column;
 }
 .col-identity {
   width: 38%;
@@ -1809,6 +1815,9 @@ body.generating-pdf .cv-entry-list li {
 }
 
 @media (max-width: 1024px) {
+  .board-wrapper {
+    padding: 100px 10px 40px;
+  }
   .hero-left,
   .hero-right,
   .col-brand,
@@ -1917,28 +1926,33 @@ body.generating-pdf .cv-entry-list li {
   text-align: center;
 }
 
-/* 03. Values */
-.values-grid-icons {
+/* 03. Values (Redesigned - Typography Only) */
+.values-grid-text {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
-}
-.val-item {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 12px;
-  font-size: 0.8rem;
-  color: #fff;
+  margin-top: 40px;
+  padding: 0 10px;
 }
-.val-icon {
-  font-size: 2rem;
-  color: var(--color-gold, #c1a162);
+.val-item-text {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 768px) {
+  .values-grid-text {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
 }
 .values-footer {
   font-size: 0.85rem;
   text-align: right;
-  margin-top: 50px;
+  margin-top: auto;
   opacity: 0.8;
 }
 
@@ -2125,9 +2139,10 @@ body.generating-pdf .cv-entry-list li {
   }
 }
 
-/* Image Placeholders (To target your setup) */
+/* Base structural fixes for placeholders */
 .ph-logo-large {
   max-width: 250px;
+  width: 100%;
   height: auto;
   display: block;
 }
@@ -2140,21 +2155,25 @@ body.generating-pdf .cv-entry-list li {
 }
 .ph-logo-md {
   max-width: 150px;
+  width: 100%;
   height: auto;
   display: block;
 }
 .ph-logo-sm {
   max-width: 80px;
+  width: 100%;
   height: auto;
   display: block;
 }
 .ph-icon {
   max-width: 30px;
+  width: 100%;
   height: auto;
   display: block;
 }
 .ph-icon-sm {
   max-width: 24px;
+  width: 100%;
   height: auto;
   display: block;
 }

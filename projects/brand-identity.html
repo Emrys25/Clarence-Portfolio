@@ -17,24 +17,56 @@
     />
 
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
   </head>
   <body class="board-page-bg">
-    <!-- Standard Site Navigation -->
-    <header class="site-header">
-      <div class="container nav-container">
-        <a href="../index.html" class="brand-logo">
-          <span class="logo-text">Honvria</span>
-          <span class="logo-subtext">Studio</span>
+    <!-- STANDARD SITE NAVIGATION (Identical to homepage) -->
+    <header class="site-header" id="site-header">
+      <nav class="nav-container" role="navigation" aria-label="Main navigation">
+        <a href="../index.html" class="nav-logo" aria-label="Home">
+          <span class="logo-text">Clarence Ruwizhi</span>
+          <span class="logo-mark">◆</span>
         </a>
-        <nav class="main-nav">
-          <ul class="nav-list">
-            <li><a href="../index.html" class="nav-link">Home</a></li>
-            <li><a href="../work.html" class="nav-link active">Work</a></li>
-            <li>
-              <a href="../contact.html" class="nav-link nav-btn">Contact</a>
-            </li>
-          </ul>
-        </nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../about.html" class="nav-link">About</a></li>
+          <li><a href="../work.html" class="nav-link active">Work</a></li>
+          <li><a href="../experience.html" class="nav-link">Experience</a></li>
+          <li><a href="../skills.html" class="nav-link">Skills</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="../cv.html" class="btn btn-nav-cv">Download CV</a>
+          <button
+            class="mobile-menu-toggle"
+            id="mobile-menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <ul class="mobile-nav-links">
+          <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="../about.html" class="mobile-nav-link">About</a></li>
+          <li>
+            <a href="../work.html" class="mobile-nav-link active">Work</a>
+          </li>
+          <li>
+            <a href="../experience.html" class="mobile-nav-link">Experience</a>
+          </li>
+          <li><a href="../skills.html" class="mobile-nav-link">Skills</a></li>
+          <li><a href="../contact.html" class="mobile-nav-link">Contact</a></li>
+          <li>
+            <a href="../cv.html" class="mobile-nav-link mobile-cv-link"
+              >Download CV</a
+            >
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -44,13 +76,14 @@
         <!-- ROW 1: HERO -->
         <div class="board-row">
           <div class="board-col hero-left bg-cream">
+            <!-- LOGO PLACEHOLDER -->
             <div class="hero-logo-wrap">
-              <!-- PLACEHOLDER: Main Logo Block -->
               <img
-                src="../assets/images/projects/branding/logo-main-dark.png"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3' fill='%23d5ceb8'%3E%3Crect width='4' height='3'/%3E%3C/svg%3E"
                 alt="Honvria Studio Logo"
                 class="ph-logo-large"
               />
+              <!-- WHEN READY, REPLACE THE LONG SRC STRING ABOVE WITH: ../assets/images/projects/branding/logo-main-dark.png -->
             </div>
             <h2 class="hero-tagline">
               Creative Expression. Purposeful Identity.
@@ -62,12 +95,13 @@
             </div>
           </div>
           <div class="board-col hero-right p-0">
-            <!-- PLACEHOLDER: Hero Graphic / Model Image -->
+            <!-- HERO MODEL/GRAPHIC PLACEHOLDER -->
             <img
-              src="../assets/images/projects/branding/hero-model.jpg"
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9' fill='%23d5ceb8'%3E%3Crect width='16' height='9'/%3E%3C/svg%3E"
               alt="Honvria Brand Graphic"
               class="ph-img-cover"
             />
+            <!-- WHEN READY, REPLACE THE LONG SRC STRING ABOVE WITH: ../assets/images/projects/branding/hero-model.jpg -->
           </div>
         </div>
 
@@ -110,29 +144,17 @@
             <div class="board-section-head text-white">
               <span class="sec-num">03. The Values</span>
             </div>
-            <div class="values-grid-icons">
-              <div class="val-item">
-                <div class="val-icon">&#9825;</div>
-                <span>Love</span>
-              </div>
-              <div class="val-item">
-                <div class="val-icon">&#128101;</div>
-                <span>Family</span>
-              </div>
-              <div class="val-item">
-                <div class="val-icon">&#129309;</div>
-                <span>Loyalty</span>
-              </div>
-              <div class="val-item">
-                <div class="val-icon">&#128737;</div>
-                <span>Honour</span>
-              </div>
-              <div class="val-item">
-                <div class="val-icon">&#10025;</div>
-                <span>Respect</span>
-              </div>
+            <!-- REDESIGNED VALUES: TYPOGRAPHY ONLY -->
+            <div class="values-grid-text">
+              <span class="val-item-text">Love</span>
+              <span class="val-item-text">Family</span>
+              <span class="val-item-text">Loyalty</span>
+              <span class="val-item-text">Honour</span>
+              <span class="val-item-text">Respect</span>
             </div>
-            <p class="values-footer">The values that guide every creation.</p>
+            <p class="values-footer mt-40">
+              The values that guide every creation.
+            </p>
           </div>
         </div>
 
@@ -145,51 +167,53 @@
             </div>
             <div class="identity-grid">
               <div class="id-main">
-                <!-- PLACEHOLDER: Logo lockup -->
+                <!-- PRIMARY LOGO PLACEHOLDER -->
                 <img
-                  src="../assets/images/projects/branding/logo-main-dark.png"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='%23d5ceb8'%3E%3Crect width='1' height='1'/%3E%3C/svg%3E"
                   alt="Primary Logo"
                   class="ph-logo-md"
                 />
+                <!-- REPLACE SRC WITH: ../assets/images/projects/branding/logo-main-dark.png -->
               </div>
               <div class="id-clearspace">
                 <span class="id-label">Clear Space</span>
-                <!-- PLACEHOLDER: Clear space diagram -->
+                <!-- CLEAR SPACE PLACEHOLDER -->
                 <img
-                  src="../assets/images/projects/branding/logo-clearspace.png"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='%23d5ceb8'%3E%3Crect width='1' height='1'/%3E%3C/svg%3E"
                   alt="Clear Space"
                   class="ph-logo-sm border-box"
                 />
+                <!-- REPLACE SRC WITH: ../assets/images/projects/branding/logo-clearspace.png -->
               </div>
               <div class="id-vars">
-                <!-- PLACEHOLDER: Logo variations -->
+                <!-- ICON VARIANTS PLACEHOLDERS -->
                 <div class="var-box bg-navy">
                   <img
-                    src="../assets/images/projects/branding/logo-icon-light.png"
-                    alt="Icon Light"
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='none'%3E%3C/svg%3E"
+                    alt=""
                     class="ph-icon"
                   />
                 </div>
                 <div class="var-box bg-cream-dark">
                   <img
-                    src="../assets/images/projects/branding/logo-icon-dark.png"
-                    alt="Icon Dark"
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='none'%3E%3C/svg%3E"
+                    alt=""
                     class="ph-icon"
                   />
                 </div>
                 <div class="var-box bg-purple-light">
                   <img
-                    src="../assets/images/projects/branding/logo-icon-purple.png"
-                    alt="Icon Purple"
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='none'%3E%3C/svg%3E"
+                    alt=""
                     class="ph-icon"
                   />
                 </div>
               </div>
               <div class="id-minimum">
                 <span class="id-label">Minimum Size</span>
-                <!-- PLACEHOLDER: Minimum size icon -->
+                <!-- MINIMUM SIZE ICON PLACEHOLDER -->
                 <img
-                  src="../assets/images/projects/branding/logo-icon-dark.png"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='%23d5ceb8'%3E%3Crect width='1' height='1'/%3E%3C/svg%3E"
                   alt="Min Size"
                   class="ph-icon-sm"
                 />
@@ -283,12 +307,13 @@
               <span class="sec-num">07. Graphic Language</span>
             </div>
             <div class="graphics-img-wrap mt-20">
-              <!-- PLACEHOLDER: Graphic language showcase -->
+              <!-- GRAPHIC LANGUAGE PLACEHOLDER -->
               <img
-                src="../assets/images/projects/branding/graphic-language.jpg"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 7' fill='%23d5ceb8'%3E%3Crect width='16' height='7'/%3E%3C/svg%3E"
                 alt="Graphic Language"
                 class="ph-img-full"
               />
+              <!-- REPLACE SRC WITH: ../assets/images/projects/branding/graphic-language.jpg -->
             </div>
             <p class="caption-text">Subtle elements. Strong impact.</p>
           </div>
@@ -297,12 +322,13 @@
               <span class="sec-num">08. Brand Applications</span>
             </div>
             <div class="graphics-img-wrap mt-20">
-              <!-- PLACEHOLDER: Stationery / Brand Applications -->
+              <!-- BRAND APPLICATIONS PLACEHOLDER -->
               <img
-                src="../assets/images/projects/branding/brand-applications.jpg"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 7' fill='%23d5ceb8'%3E%3Crect width='16' height='7'/%3E%3C/svg%3E"
                 alt="Brand Applications"
                 class="ph-img-full"
               />
+              <!-- REPLACE SRC WITH: ../assets/images/projects/branding/brand-applications.jpg -->
             </div>
             <p class="caption-text">Consistent. Versatile. Iconic.</p>
           </div>
@@ -310,17 +336,18 @@
 
         <!-- ROW 5: DIGITAL, COMPLETE IDENTITY -->
         <div class="board-row">
-          <div class="board-col col-digital bg-cream">
+          <div class="board-col col-digital bg-cream border-right">
             <div class="board-section-head">
               <span class="sec-num">09. Digital Presence</span>
             </div>
             <div class="graphics-img-wrap mt-20 text-center">
-              <!-- PLACEHOLDER: Device Mockup -->
+              <!-- DIGITAL PLACEHOLDER -->
               <img
-                src="../assets/images/projects/branding/digital-presence.jpg"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3' fill='%23d5ceb8'%3E%3Crect width='4' height='3'/%3E%3C/svg%3E"
                 alt="Digital Presence"
                 class="ph-img-full"
               />
+              <!-- REPLACE SRC WITH: ../assets/images/projects/branding/digital-presence.jpg -->
             </div>
             <p class="caption-text mt-20">
               A seamless experience across every platform.
@@ -333,12 +360,13 @@
             </div>
             <div class="complete-flex mt-20">
               <div class="complete-img">
-                <!-- PLACEHOLDER: Complete brand collage -->
+                <!-- COMPLETE IDENTITY PLACEHOLDER -->
                 <img
-                  src="../assets/images/projects/branding/complete-identity.jpg"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3' fill='%23222'%3E%3Crect width='4' height='3'/%3E%3C/svg%3E"
                   alt="Complete Identity"
                   class="ph-img-full"
                 />
+                <!-- REPLACE SRC WITH: ../assets/images/projects/branding/complete-identity.jpg -->
               </div>
               <div class="complete-text">
                 <h3 class="board-heading text-white">
@@ -350,7 +378,7 @@
                 </p>
                 <div class="complete-footer mt-40">
                   <span class="d-block text-white">Honvria Studio.</span>
-                  <span class="d-block opacity-60"
+                  <span class="d-block opacity-60 mt-5"
                     >Built on values. Driven by creativity.</span
                   >
                 </div>
@@ -363,12 +391,13 @@
         <div class="board-footer bg-navy border-top-light">
           <div class="board-footer-flex">
             <div class="footer-logo">
-              <!-- PLACEHOLDER: Bottom Footer Logo -->
+              <!-- FOOTER LOGO PLACEHOLDER -->
               <img
-                src="../assets/images/projects/branding/logo-main-light.png"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3' fill='none'%3E%3C/svg%3E"
                 alt="Honvria Studio"
                 class="ph-logo-sm"
               />
+              <!-- REPLACE SRC WITH: ../assets/images/projects/branding/logo-main-light.png -->
             </div>
             <div class="footer-tagline">
               CREATIVE EXPRESSION. PURPOSEFUL IDENTITY.
@@ -377,16 +406,20 @@
               &copy; 2026 Honvria Studio. All rights reserved.
             </div>
           </div>
-          <!-- PLACEHOLDER: Bottom color band graphic -->
+          <!-- BOTTOM GRAPHIC BAND PLACEHOLDER -->
           <div class="footer-band">
             <img
-              src="../assets/images/projects/branding/footer-band.jpg"
-              alt="Brand Colors"
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1' fill='%23222'%3E%3Crect width='100' height='1'/%3E%3C/svg%3E"
+              alt=""
               class="ph-band-img"
             />
+            <!-- REPLACE SRC WITH: ../assets/images/projects/branding/footer-band.jpg -->
           </div>
         </div>
       </div>
     </main>
+
+    <!-- Script loading for mobile menu function -->
+    <script src="../js/main.js"></script>
   </body>
 </html>
