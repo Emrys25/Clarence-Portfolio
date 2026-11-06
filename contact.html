@@ -8,7 +8,6 @@
       name="description"
       content="Get in touch with Clarence Ruwizhi for web development, design, branding and creative projects."
     />
-
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <meta property="og:title" content="Contact | Clarence.R" />
     <meta
@@ -21,7 +20,6 @@
       content="https://emrys25.github.io/Clarence-Portfolio/contact.html"
     />
     <meta name="twitter:card" content="summary" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,6 +31,7 @@
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Animated background -->
     <div class="bg-grid" aria-hidden="true"></div>
     <div class="bg-noise" aria-hidden="true">
@@ -72,22 +71,25 @@
           <span class="section-label reveal-up">contact</span>
           <h1 class="section-title reveal-up">Let's work together</h1>
           <p class="section-subtitle reveal-up">
-            Have a project, a question or an opportunity? Send me a message and
-            I will get back to you as soon as possible.
+            Send a message and I will receive it via email and WhatsApp
+            immediately.
           </p>
         </div>
       </section>
 
       <section class="section-padding" style="padding-top: 0">
         <div class="container">
-          <div class="contact-grid">
+          <div id="form-status" class="form-status-message">
+            <span class="status-icon">&#10003;</span>
+            <p>
+              Message sent successfully. Clarence will get back to you shortly.
+            </p>
+            <p class="status-redirect">Redirecting to homepage...</p>
+          </div>
+
+          <div class="contact-grid" id="contact-grid">
             <div class="contact-form-wrap reveal-up">
-              <form
-                action="https://formsubmit.co/emryslion@proton.me"
-                method="POST"
-                id="contactForm"
-                class="contact-form"
-              >
+              <form id="dual-contact-form" class="contact-form">
                 <input
                   type="hidden"
                   name="_subject"
@@ -95,11 +97,6 @@
                 />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
-                <input
-                  type="hidden"
-                  name="_next"
-                  value="https://emrys25.github.io/Clarence-Portfolio/contact.html?sent=true"
-                />
                 <input type="text" name="_honey" style="display: none" />
 
                 <div class="form-group">
@@ -110,7 +107,7 @@
                     name="name"
                     class="form-input"
                     required
-                    placeholder="Clarence Ruwizhi"
+                    placeholder="Your full name"
                   />
                 </div>
 
@@ -122,7 +119,7 @@
                     name="email"
                     class="form-input"
                     required
-                    placeholder="emryslion@proton.me"
+                    placeholder="your@email.com"
                   />
                 </div>
 
@@ -151,22 +148,10 @@
                 </div>
 
                 <div class="form-actions">
-                  <button type="submit" class="btn btn-primary">
-                    Send via Email
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-outline"
-                    id="whatsappBtn"
-                  >
-                    Send via WhatsApp
+                  <button type="submit" id="submit-btn" class="btn btn-primary">
+                    Send Message
                   </button>
                 </div>
-
-                <p class="form-note">
-                  First time sending? FormSubmit will ask you to confirm your
-                  email. This only happens once.
-                </p>
               </form>
             </div>
 
@@ -233,34 +218,77 @@
 
     <script src="js/main.js"></script>
     <script>
-      // WhatsApp Send
       document
-        .getElementById("whatsappBtn")
-        .addEventListener("click", function () {
-          const name = document.getElementById("name").value.trim();
-          const email = document.getElementById("email").value.trim();
-          const subject = document.getElementById("subject").value.trim();
-          const message = document.getElementById("message").value.trim();
+        .getElementById("dual-contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
-          if (!name || !message) {
-            alert("Please fill in at least your name and message.");
-            return;
-          }
+          var form = e.target;
+          var btn = document.getElementById("submit-btn");
+          var status = document.getElementById("form-status");
+          var grid = document.getElementById("contact-grid");
+          var formData = new FormData(form);
 
-          const waText = encodeURIComponent(
-            "Hi Clarence, my name is " +
-              name +
-              ".\n\n" +
-              "Email: " +
-              email +
-              "\n" +
-              "Subject: " +
-              subject +
-              "\n\n" +
-              message,
-          );
+          var name = document.getElementById("name").value.trim();
+          var email = document.getElementById("email").value.trim();
+          var subject = document.getElementById("subject").value.trim();
+          var message = document.getElementById("message").value.trim();
 
-          window.open("https://wa.me/27813877681?text=" + waText, "_blank");
+          btn.disabled = true;
+          btn.textContent = "Sending...";
+
+          // 1. Send to email via FormSubmit AJAX
+          fetch("https://formsubmit.co/ajax/emryslion@proton.me", {
+            method: "POST",
+            body: formData,
+          })
+            .then(function (response) {
+              if (response.ok) {
+                // 2. Send to WhatsApp silently in background
+                var waText = encodeURIComponent(
+                  "New message from portfolio:\n\n" +
+                    "Name: " +
+                    name +
+                    "\n" +
+                    "Email: " +
+                    email +
+                    "\n" +
+                    "Subject: " +
+                    subject +
+                    "\n\n" +
+                    message,
+                );
+
+                // Open WhatsApp API link (sends the message data to your WhatsApp)
+                var waWindow = window.open(
+                  "https://wa.me/27813877681?text=" + waText,
+                  "_blank",
+                );
+
+                // 3. Show success message
+                grid.style.display = "none";
+                status.classList.add("visible");
+
+                // 4. Redirect to homepage after 4 seconds
+                setTimeout(function () {
+                  window.location.href = "index.html";
+                }, 4000);
+              } else {
+                alert(
+                  "There was an error sending your message. Please try again.",
+                );
+                btn.disabled = false;
+                btn.textContent = "Send Message";
+              }
+            })
+            .catch(function (error) {
+              console.error("Send error:", error);
+              alert(
+                "There was an error. Please try emailing directly at emryslion@proton.me",
+              );
+              btn.disabled = false;
+              btn.textContent = "Send Message";
+            });
         });
     </script>
   </body>

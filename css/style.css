@@ -295,60 +295,92 @@ button {
   color: var(--text-primary);
 }
 
-/* 8. MOBILE MENU */
-.mobile-menu-toggle {
+/* ============================================
+   8. MOBILE MENU (UPDATED)
+   ============================================ */
+.menu-toggle {
   display: none;
   flex-direction: column;
-  gap: 5px;
-  padding: 8px;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0;
 }
 
-.hamburger-line {
-  display: block;
-  width: 20px;
-  height: 1.5px;
-  background: var(--text-primary);
-  transition: all var(--ease-base);
+.menu-toggle span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: left;
 }
 
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 56px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(30, 30, 30, 0.98);
-  backdrop-filter: blur(20px);
-  z-index: 999;
-  padding: 40px 24px;
+/* Dev-style X animation */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg);
+  background-color: var(--purple-light);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  background-color: var(--purple-light);
 }
 
-.mobile-menu.is-open {
-  display: block;
-}
-
-.mobile-nav-links {
+.main-nav {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
+  align-items: center;
+  gap: 2rem;
 }
 
-.mobile-nav-link {
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  color: var(--text-secondary);
-}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
 
-.mobile-nav-link:hover {
-  color: var(--text-primary);
-}
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh; /* Fixed: Full screen height */
+    background: #0a0a0a; /* Solid dark background */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    padding: 2rem;
+    overflow-y: auto; /* Allow menu itself to scroll if items overflow */
+  }
 
-.mobile-cv-link {
-  color: var(--accent-purple);
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border-subtle);
+  .main-nav.open {
+    right: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+    font-family: "Playfair Display", serif;
+  }
+
+  .nav-actions {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* 9. HERO */
@@ -978,137 +1010,47 @@ button {
   background: var(--accent-purple-dim);
 }
 
-/* 18. CONTACT PAGE */
+/* ============================================
+   18. CONTACT FORM & DUAL-SEND (UPDATED)
+   ============================================ */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 48px;
-  align-items: flex-start;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  align-items: start;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.status-message {
+  display: none;
+  padding: 1.5rem;
+  background: rgba(148, 86, 237, 0.1);
+  border: 1px solid var(--purple);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--purple-light);
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+.status-message.visible {
+  display: block;
+  animation: fadeIn 0.4s ease forwards;
 }
 
-.form-label {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.form-input {
-  font-family: var(--font-body);
-  font-size: 0.92rem;
-  color: var(--text-primary);
-  background: var(--bg-surface);
-  border: 1px solid var(--border-default);
-  border-radius: 4px;
-  padding: 12px 16px;
-  transition: border-color var(--ease-fast);
-  outline: none;
-}
-
-.form-input:focus {
-  border-color: var(--accent-purple);
-  box-shadow: 0 0 0 2px var(--accent-purple-dim);
-}
-
-.form-input::placeholder {
-  color: var(--text-muted);
-}
-
-.form-textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.form-actions {
-  display: flex;
-  gap: 12px;
-  margin-top: 8px;
-}
-
-.form-note {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.contact-info-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: 6px;
-  padding: 24px;
-}
-
-.contact-info-heading {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--accent-purple);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 16px;
-}
-
-.contact-info-item {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  margin-bottom: 14px;
-}
-
-.contact-info-item:last-child {
-  margin-bottom: 0;
-}
-
-.contact-info-label {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.contact-info-value {
-  font-size: 0.92rem;
-  color: var(--text-primary);
-}
-
-a.contact-info-value:hover {
-  color: var(--accent-purple);
-}
-
-.contact-info-text {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .contact-grid {
     grid-template-columns: 1fr;
-  }
-  .form-actions {
-    flex-direction: column;
+    gap: 3rem;
   }
 }
 
@@ -1772,6 +1714,151 @@ main,
 .meta-note a {
   color: var(--purple-light);
   text-decoration: underline;
+}
+
+/* ============================================
+   25. MOBILE MENU FIX (FULL SCREEN + X ICON)
+   ============================================ */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0a0a0a;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mobile-nav-link {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: block;
+  padding: 0.25rem 0;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: var(--purple-light);
+}
+
+.mobile-cv-link {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.mobile-cv-link:hover {
+  background: var(--purple);
+  color: #fff;
+}
+
+/* Hamburger to X animation */
+.mobile-menu-toggle {
+  z-index: 1001;
+  position: relative;
+}
+
+.hamburger-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background-color: var(--purple-light);
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: var(--purple-light);
+}
+
+/* ============================================
+   26. CONTACT FORM SUCCESS MESSAGE
+   ============================================ */
+.form-status-message {
+  display: none;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(148, 86, 237, 0.08);
+  border: 1px solid rgba(148, 86, 237, 0.3);
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-status-message.visible {
+  display: block;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.form-status-message .status-icon {
+  display: block;
+  font-size: 3rem;
+  color: var(--purple);
+  margin-bottom: 1rem;
+}
+
+.form-status-message p {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.form-status-message .status-redirect {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ============================================
