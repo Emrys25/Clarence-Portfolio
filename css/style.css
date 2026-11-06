@@ -1773,3 +1773,98 @@ main,
   color: var(--purple-light);
   text-decoration: underline;
 }
+
+/* ============================================
+   404 TERMINAL WINDOW STYLING
+   ============================================ */
+.error-terminal {
+  max-width: 580px;
+  margin: 0 auto 2.5rem;
+  background: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.error-terminal .terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #222222;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.error-terminal .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.error-terminal .dot.red {
+  background: #ff5f56;
+}
+.error-terminal .dot.yellow {
+  background: #ffbd2e;
+}
+.error-terminal .dot.green {
+  background: #27c93f;
+}
+
+.error-terminal .terminal-title {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  color: #888888;
+  margin-left: 0.5rem;
+}
+
+.error-terminal .terminal-body {
+  padding: 1.25rem 1.5rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.error-terminal .terminal-body p {
+  margin-bottom: 0.4rem;
+}
+
+.error-terminal .terminal-body p:last-child {
+  margin-bottom: 0;
+}
+
+.error-terminal .t-prompt {
+  color: #ff7abd;
+  margin-right: 0.4rem;
+}
+
+.error-terminal .t-cmd {
+  color: #56a8f4;
+}
+
+.error-terminal .t-output {
+  color: #bbbbbb;
+}
+
+.error-terminal .t-error {
+  color: #ff7abd;
+  font-weight: 500;
+}
+
+.error-terminal .t-cursor {
+  color: #9456ed;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
