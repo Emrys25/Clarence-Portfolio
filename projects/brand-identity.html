@@ -3,423 +3,776 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Honvria Studio Brand Identity | Clarence Ruwizhi</title>
+    <title>Honvria Studio Brand Identity | Clarence.R</title>
     <meta
       name="description"
-      content="A complete presentation of the Honvria Studio brand identity, including logo, typography, color palette, and applications."
+      content="Brand identity showcase for Honvria Studio, an independent creative studio founded by Clarence Emrys Lion."
     />
+
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <meta property="og:title" content="Honvria Brand Identity | Clarence.R" />
+    <meta
+      property="og:description"
+      content="Brand identity design for Honvria Studio by Clarence.R."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://emrys25.github.io/Clarence-Portfolio/projects/brand-identity.html"
+    />
+    <meta name="twitter:card" content="summary" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
       rel="stylesheet"
     />
-
+    <meta name="base-path" content="../" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
   </head>
-  <body class="board-page-bg">
-    <!-- STANDARD SITE NAVIGATION (Identical to homepage) -->
-    <header class="site-header" id="site-header">
-      <nav class="nav-container" role="navigation" aria-label="Main navigation">
-        <a href="../index.html" class="nav-logo" aria-label="Home">
-          <span class="logo-text">Clarence Ruwizhi</span>
-          <span class="logo-mark">◆</span>
-        </a>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="../index.html" class="nav-link">Home</a></li>
-          <li><a href="../about.html" class="nav-link">About</a></li>
-          <li><a href="../work.html" class="nav-link active">Work</a></li>
-          <li><a href="../experience.html" class="nav-link">Experience</a></li>
-          <li><a href="../skills.html" class="nav-link">Skills</a></li>
-          <li><a href="../contact.html" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="nav-actions">
-          <a href="../cv.html" class="btn btn-nav-cv">Download CV</a>
-          <button
-            class="mobile-menu-toggle"
-            id="mobile-menu-toggle"
-            aria-label="Toggle navigation menu"
-            aria-expanded="false"
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="header-placeholder"></div>
+    <main id="main-content">
+      <!-- BACK LINK -->
+      <section style="padding-top: calc(56px + 40px)">
+        <div class="container">
+          <a
+            href="../work.html"
+            class="back-link reveal-up"
+            style="
+              font-family: var(--font-mono);
+              font-size: 0.78rem;
+              color: var(--text-muted);
+              display: inline-flex;
+              align-items: center;
+              gap: 8px;
+            "
           >
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
+            <span style="color: var(--accent-purple)">&larr;</span> Back to Work
+          </a>
         </div>
-      </nav>
-      <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-        <ul class="mobile-nav-links">
-          <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
-          <li><a href="../about.html" class="mobile-nav-link">About</a></li>
-          <li>
-            <a href="../work.html" class="mobile-nav-link active">Work</a>
-          </li>
-          <li>
-            <a href="../experience.html" class="mobile-nav-link">Experience</a>
-          </li>
-          <li><a href="../skills.html" class="mobile-nav-link">Skills</a></li>
-          <li><a href="../contact.html" class="mobile-nav-link">Contact</a></li>
-          <li>
-            <a href="../cv.html" class="mobile-nav-link mobile-cv-link"
-              >Download CV</a
-            >
-          </li>
-        </ul>
-      </div>
-    </header>
+      </section>
 
-    <main id="main-content" class="board-wrapper">
-      <!-- THE PRESENTATION BOARD -->
-      <div class="brand-board">
-        <!-- ROW 1: HERO -->
-        <div class="board-row">
-          <div class="board-col hero-left bg-cream">
-            <!-- LOGO PLACEHOLDER -->
-            <div class="hero-logo-wrap">
-              <img
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3' fill='%23d5ceb8'%3E%3Crect width='4' height='3'/%3E%3C/svg%3E"
-                alt="Honvria Studio Logo"
-                class="ph-logo-large"
-              />
-              <!-- WHEN READY, REPLACE THE LONG SRC STRING ABOVE WITH: ../assets/images/projects/branding/logo-main-dark.png -->
+      <!-- PROJECT HEADER -->
+      <section class="section-padding" style="padding-top: 24px">
+        <div class="container">
+          <span class="section-label reveal-up">branding & identity</span>
+          <h1
+            class="section-title reveal-up"
+            style="font-size: clamp(2.2rem, 5vw, 3.5rem)"
+          >
+            Honvria Studio
+          </h1>
+          <p class="section-subtitle reveal-up" style="max-width: 600px">
+            Complete brand identity for an independent creative studio. Naming,
+            logo system, colour palette, typography and brand applications.
+          </p>
+
+          <div
+            class="reveal-up"
+            style="display: flex; gap: 32px; margin-top: 32px; flex-wrap: wrap"
+          >
+            <div>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 0.68rem;
+                  color: var(--text-muted);
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                  display: block;
+                  margin-bottom: 4px;
+                "
+                >Role</span
+              >
+              <span style="font-size: 0.92rem; color: var(--text-primary)"
+                >Founder, Creative Director, Designer</span
+              >
             </div>
-            <h2 class="hero-tagline">
-              Creative Expression. Purposeful Identity.
-            </h2>
-            <div class="hero-meta">
-              <span>Brand Identity</span>
-              <span class="meta-divider">|</span>
-              <span>2026</span>
+            <div>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 0.68rem;
+                  color: var(--text-muted);
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                  display: block;
+                  margin-bottom: 4px;
+                "
+                >Year</span
+              >
+              <span style="font-size: 0.92rem; color: var(--text-primary)"
+                >2026</span
+              >
             </div>
-          </div>
-          <div class="board-col hero-right p-0">
-            <!-- HERO MODEL/GRAPHIC PLACEHOLDER -->
-            <img
-              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9' fill='%23d5ceb8'%3E%3Crect width='16' height='9'/%3E%3C/svg%3E"
-              alt="Honvria Brand Graphic"
-              class="ph-img-cover"
-            />
-            <!-- WHEN READY, REPLACE THE LONG SRC STRING ABOVE WITH: ../assets/images/projects/branding/hero-model.jpg -->
+            <div>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 0.68rem;
+                  color: var(--text-muted);
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                  display: block;
+                  margin-bottom: 4px;
+                "
+                >Discipline</span
+              >
+              <span style="font-size: 0.92rem; color: var(--text-primary)"
+                >Brand Identity</span
+              >
+            </div>
           </div>
         </div>
+      </section>
 
-        <!-- ROW 2: BRAND, MEANING, VALUES -->
-        <div class="board-row border-bottom">
-          <div class="board-col col-brand bg-cream border-right">
-            <div class="board-section-head">
-              <span class="sec-num">01. The Brand</span>
-              <div class="sec-line"></div>
-            </div>
-            <h3 class="board-heading">More than a<br />creative studio.</h3>
-            <p class="board-text">
-              Honvria Studio is an independent creative studio built on the
-              belief that great design goes beyond appearance. We bring together
-              design, technology and storytelling to create meaningful visual
-              experiences that inspire, connect and last.
-            </p>
-          </div>
-
-          <div class="board-col col-meaning bg-cream">
-            <div class="board-section-head">
-              <span class="sec-num">02. The Meaning</span>
-              <div class="sec-line"></div>
-            </div>
-            <div class="meaning-display">
-              <h3 class="meaning-hon">HON</h3>
-              <span class="meaning-divider">|</span>
-              <h3 class="meaning-vria">VRIA</h3>
-            </div>
-            <div class="meaning-text-flex">
-              <p class="board-text">
-                Honour. Integrity.<br />Loyalty. Respect.
+      <!-- 01. THE BRAND -->
+      <section
+        class="section-padding"
+        style="
+          border-top: 1px solid var(--border-subtle);
+          background: var(--bg-raised);
+        "
+      >
+        <div class="container">
+          <span class="section-label reveal-up">01. the brand</span>
+          <h2 class="section-title reveal-up">More than a creative studio</h2>
+          <div class="about-grid reveal-up" style="margin-top: 24px">
+            <div class="about-text">
+              <p>
+                Honvria Studio is an independent creative studio built on the
+                belief that great design goes beyond appearance. The studio
+                brings together development, design and storytelling to create
+                meaningful visual experiences that inspire, connect and last.
               </p>
-              <p class="board-text">Elegance. Modernity.<br />Creativity.</p>
+              <p>
+                The name Honvria is a combination of two parts:
+                <strong style="color: var(--accent-blue)">HON</strong> (honour,
+                integrity, loyalty) and
+                <strong style="color: var(--accent-gold)">VRIA</strong>
+                (elegance, modernity, creativity). Together they form a name
+                built on character.
+              </p>
             </div>
-            <p class="meaning-footer">A NAME BUILT ON CHARACTER.</p>
-          </div>
-
-          <div class="board-col col-values bg-navy">
-            <div class="board-section-head text-white">
-              <span class="sec-num">03. The Values</span>
-            </div>
-            <!-- REDESIGNED VALUES: TYPOGRAPHY ONLY -->
-            <div class="values-grid-text">
-              <span class="val-item-text">Love</span>
-              <span class="val-item-text">Family</span>
-              <span class="val-item-text">Loyalty</span>
-              <span class="val-item-text">Honour</span>
-              <span class="val-item-text">Respect</span>
-            </div>
-            <p class="values-footer mt-40">
-              The values that guide every creation.
-            </p>
-          </div>
-        </div>
-
-        <!-- ROW 3: IDENTITY, COLOURS, TYPOGRAPHY -->
-        <div class="board-row border-bottom">
-          <div class="board-col col-identity bg-cream border-right">
-            <div class="board-section-head">
-              <span class="sec-num">04. The Identity</span>
-              <div class="sec-line"></div>
-            </div>
-            <div class="identity-grid">
-              <div class="id-main">
-                <!-- PRIMARY LOGO PLACEHOLDER -->
-                <img
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='%23d5ceb8'%3E%3Crect width='1' height='1'/%3E%3C/svg%3E"
-                  alt="Primary Logo"
-                  class="ph-logo-md"
-                />
-                <!-- REPLACE SRC WITH: ../assets/images/projects/branding/logo-main-dark.png -->
+            <div style="display: flex; flex-direction: column; gap: 12px">
+              <div
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 0.68rem;
+                  color: var(--text-muted);
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                  margin-bottom: 4px;
+                "
+              >
+                Core Values
               </div>
-              <div class="id-clearspace">
-                <span class="id-label">Clear Space</span>
-                <!-- CLEAR SPACE PLACEHOLDER -->
-                <img
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='%23d5ceb8'%3E%3Crect width='1' height='1'/%3E%3C/svg%3E"
-                  alt="Clear Space"
-                  class="ph-logo-sm border-box"
-                />
-                <!-- REPLACE SRC WITH: ../assets/images/projects/branding/logo-clearspace.png -->
-              </div>
-              <div class="id-vars">
-                <!-- ICON VARIANTS PLACEHOLDERS -->
-                <div class="var-box bg-navy">
-                  <img
-                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='none'%3E%3C/svg%3E"
-                    alt=""
-                    class="ph-icon"
-                  />
-                </div>
-                <div class="var-box bg-cream-dark">
-                  <img
-                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='none'%3E%3C/svg%3E"
-                    alt=""
-                    class="ph-icon"
-                  />
-                </div>
-                <div class="var-box bg-purple-light">
-                  <img
-                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='none'%3E%3C/svg%3E"
-                    alt=""
-                    class="ph-icon"
-                  />
-                </div>
-              </div>
-              <div class="id-minimum">
-                <span class="id-label">Minimum Size</span>
-                <!-- MINIMUM SIZE ICON PLACEHOLDER -->
-                <img
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='%23d5ceb8'%3E%3Crect width='1' height='1'/%3E%3C/svg%3E"
-                  alt="Min Size"
-                  class="ph-icon-sm"
-                />
-                <span class="id-size">24px</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="board-col col-colours bg-cream border-right">
-            <div class="board-section-head">
-              <span class="sec-num">05. Colour Palette</span>
-            </div>
-            <div class="colour-swatches">
-              <div class="swatch-col">
-                <div class="swatch-box" style="background: #000080"></div>
-                <span class="s-name">Navy</span
-                ><span class="s-hex">#000080</span>
-              </div>
-              <div class="swatch-col">
-                <div class="swatch-box" style="background: #9456ed"></div>
-                <span class="s-name">Purple</span
-                ><span class="s-hex">#9456ED</span>
-              </div>
-              <div class="swatch-col">
-                <div class="swatch-box" style="background: #56a8f4"></div>
-                <span class="s-name">Sky Blue</span
-                ><span class="s-hex">#56A8F4</span>
-              </div>
-              <div class="swatch-col">
-                <div class="swatch-box" style="background: #ff7abd"></div>
-                <span class="s-name">Pink</span
-                ><span class="s-hex">#FF7ABD</span>
-              </div>
-              <div class="swatch-col">
-                <div
-                  class="swatch-box"
-                  style="background: #f0ebd8; border: 1px solid #ddd"
-                ></div>
-                <span class="s-name">Cream</span
-                ><span class="s-hex">#f0ebd8</span>
-              </div>
-              <div class="swatch-col">
-                <div class="swatch-box" style="background: #630607"></div>
-                <span class="s-name">Burgundy</span
-                ><span class="s-hex">#630607</span>
-              </div>
-              <div class="swatch-col">
-                <div class="swatch-box" style="background: #c1a162"></div>
-                <span class="s-name">Gold</span
-                ><span class="s-hex">#c1a162</span>
-              </div>
-              <div class="swatch-col">
-                <div class="swatch-box" style="background: #111111"></div>
-                <span class="s-name">Black</span
-                ><span class="s-hex">#111111</span>
-              </div>
-            </div>
-            <p class="board-text text-center mt-20">
-              A palette that balances professionalism,<br />creativity and
-              warmth.
-            </p>
-          </div>
-
-          <div class="board-col col-typography bg-cream">
-            <div class="board-section-head">
-              <span class="sec-num">06. Typography</span>
-            </div>
-            <div class="type-flex">
-              <div class="type-block">
-                <span class="type-aa serif">Aa</span>
-                <span class="type-name">Playfair Display</span>
-                <span class="type-role">Headings</span>
-              </div>
-              <div class="type-divider"></div>
-              <div class="type-block">
-                <span class="type-aa sans">Aa</span>
-                <span class="type-name">Inter</span>
-                <span class="type-role">Body Text</span>
-              </div>
-            </div>
-            <p class="board-text text-center mt-20">
-              Elegant. Clear. Timeless.
-            </p>
-          </div>
-        </div>
-
-        <!-- ROW 4: GRAPHICS, APPLICATIONS -->
-        <div class="board-row border-bottom">
-          <div class="board-col col-graphics bg-cream border-right">
-            <div class="board-section-head">
-              <span class="sec-num">07. Graphic Language</span>
-            </div>
-            <div class="graphics-img-wrap mt-20">
-              <!-- GRAPHIC LANGUAGE PLACEHOLDER -->
-              <img
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 7' fill='%23d5ceb8'%3E%3Crect width='16' height='7'/%3E%3C/svg%3E"
-                alt="Graphic Language"
-                class="ph-img-full"
-              />
-              <!-- REPLACE SRC WITH: ../assets/images/projects/branding/graphic-language.jpg -->
-            </div>
-            <p class="caption-text">Subtle elements. Strong impact.</p>
-          </div>
-          <div class="board-col col-apps bg-cream">
-            <div class="board-section-head">
-              <span class="sec-num">08. Brand Applications</span>
-            </div>
-            <div class="graphics-img-wrap mt-20">
-              <!-- BRAND APPLICATIONS PLACEHOLDER -->
-              <img
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 7' fill='%23d5ceb8'%3E%3Crect width='16' height='7'/%3E%3C/svg%3E"
-                alt="Brand Applications"
-                class="ph-img-full"
-              />
-              <!-- REPLACE SRC WITH: ../assets/images/projects/branding/brand-applications.jpg -->
-            </div>
-            <p class="caption-text">Consistent. Versatile. Iconic.</p>
-          </div>
-        </div>
-
-        <!-- ROW 5: DIGITAL, COMPLETE IDENTITY -->
-        <div class="board-row">
-          <div class="board-col col-digital bg-cream border-right">
-            <div class="board-section-head">
-              <span class="sec-num">09. Digital Presence</span>
-            </div>
-            <div class="graphics-img-wrap mt-20 text-center">
-              <!-- DIGITAL PLACEHOLDER -->
-              <img
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3' fill='%23d5ceb8'%3E%3Crect width='4' height='3'/%3E%3C/svg%3E"
-                alt="Digital Presence"
-                class="ph-img-full"
-              />
-              <!-- REPLACE SRC WITH: ../assets/images/projects/branding/digital-presence.jpg -->
-            </div>
-            <p class="caption-text mt-20">
-              A seamless experience across every platform.
-            </p>
-          </div>
-          <div class="board-col col-complete bg-navy">
-            <div class="board-section-head text-white">
-              <span class="sec-num">10. The Complete Identity</span>
-              <div class="sec-line border-light"></div>
-            </div>
-            <div class="complete-flex mt-20">
-              <div class="complete-img">
-                <!-- COMPLETE IDENTITY PLACEHOLDER -->
-                <img
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3' fill='%23222'%3E%3Crect width='4' height='3'/%3E%3C/svg%3E"
-                  alt="Complete Identity"
-                  class="ph-img-full"
-                />
-                <!-- REPLACE SRC WITH: ../assets/images/projects/branding/complete-identity.jpg -->
-              </div>
-              <div class="complete-text">
-                <h3 class="board-heading text-white">
-                  An identity<br />with purpose.
-                </h3>
-                <p class="board-text text-white opacity-80 mt-20">
-                  Honvria Studio is more than a brand. It is a commitment to
-                  creativity, integrity and meaningful design.
-                </p>
-                <div class="complete-footer mt-40">
-                  <span class="d-block text-white">Honvria Studio.</span>
-                  <span class="d-block opacity-60 mt-5"
-                    >Built on values. Driven by creativity.</span
-                  >
-                </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                <span class="cv-tag">Love</span>
+                <span class="cv-tag">Family</span>
+                <span class="cv-tag">Loyalty</span>
+                <span class="cv-tag">Honour</span>
+                <span class="cv-tag">Respect</span>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- FOOTER BAR -->
-        <div class="board-footer bg-navy border-top-light">
-          <div class="board-footer-flex">
-            <div class="footer-logo">
-              <!-- FOOTER LOGO PLACEHOLDER -->
-              <img
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3' fill='none'%3E%3C/svg%3E"
-                alt="Honvria Studio"
-                class="ph-logo-sm"
-              />
-              <!-- REPLACE SRC WITH: ../assets/images/projects/branding/logo-main-light.png -->
+      <!-- 02. LOGO SYSTEM -->
+      <section
+        class="section-padding"
+        style="border-top: 1px solid var(--border-subtle)"
+      >
+        <div class="container">
+          <span class="section-label reveal-up">02. logo system</span>
+          <h2 class="section-title reveal-up">Logo variations</h2>
+          <p class="section-subtitle reveal-up">
+            The logo system includes a primary wordmark, a monogram mark and
+            simplified icon versions for different contexts.
+          </p>
+
+          <div
+            class="reveal-up"
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+              gap: 20px;
+              margin-top: 40px;
+            "
+          >
+            <div class="brand-showcase-card">
+              <div
+                class="brand-showcase-preview"
+                style="background: var(--bg-base)"
+              >
+                <span
+                  style="
+                    font-family: var(--font-heading);
+                    font-size: 2rem;
+                    color: var(--text-heading);
+                    letter-spacing: 2px;
+                  "
+                  >HONVRIA</span
+                >
+              </div>
+              <div class="brand-showcase-label">Primary Wordmark</div>
+              <div class="brand-showcase-note">
+                Full logo on dark background. Used for headers, hero sections
+                and primary brand placements.
+              </div>
+              <!-- REPLACE WITH: <img src="../assets/images/projects/branding/logo-primary-dark.png" alt="Primary Logo Dark"> -->
             </div>
-            <div class="footer-tagline">
-              CREATIVE EXPRESSION. PURPOSEFUL IDENTITY.
+
+            <div class="brand-showcase-card">
+              <div class="brand-showcase-preview" style="background: #f0ebd8">
+                <span
+                  style="
+                    font-family: var(--font-heading);
+                    font-size: 2rem;
+                    color: #000080;
+                    letter-spacing: 2px;
+                  "
+                  >HONVRIA</span
+                >
+              </div>
+              <div class="brand-showcase-label">Primary Wordmark (Light)</div>
+              <div class="brand-showcase-note">
+                Full logo on cream background. Used for print, stationery and
+                light-themed applications.
+              </div>
+              <!-- REPLACE WITH: <img src="../assets/images/projects/branding/logo-primary-light.png" alt="Primary Logo Light"> -->
             </div>
-            <div class="footer-copy">
-              &copy; 2026 Honvria Studio. All rights reserved.
+
+            <div class="brand-showcase-card">
+              <div
+                class="brand-showcase-preview"
+                style="background: var(--bg-base)"
+              >
+                <span
+                  style="
+                    font-family: var(--font-heading);
+                    font-size: 3rem;
+                    color: var(--text-heading);
+                    font-weight: 700;
+                  "
+                  >H</span
+                >
+              </div>
+              <div class="brand-showcase-label">Monogram Mark</div>
+              <div class="brand-showcase-note">
+                Simplified H mark for favicons, social media avatars and compact
+                placements.
+              </div>
+              <!-- REPLACE WITH: <img src="../assets/images/projects/branding/logo-monogram.png" alt="Monogram Mark"> -->
             </div>
-          </div>
-          <!-- BOTTOM GRAPHIC BAND PLACEHOLDER -->
-          <div class="footer-band">
-            <img
-              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1' fill='%23222'%3E%3Crect width='100' height='1'/%3E%3C/svg%3E"
-              alt=""
-              class="ph-band-img"
-            />
-            <!-- REPLACE SRC WITH: ../assets/images/projects/branding/footer-band.jpg -->
+
+            <div class="brand-showcase-card">
+              <div class="brand-showcase-preview" style="background: #000080">
+                <span
+                  style="
+                    font-family: var(--font-heading);
+                    font-size: 3rem;
+                    color: #fff;
+                    font-weight: 700;
+                  "
+                  >H</span
+                >
+              </div>
+              <div class="brand-showcase-label">Monogram (Navy)</div>
+              <div class="brand-showcase-note">
+                White monogram on navy. Used for watermarks, stamps and
+                secondary placements.
+              </div>
+              <!-- REPLACE WITH: <img src="../assets/images/projects/branding/logo-monogram-navy.png" alt="Monogram Navy"> -->
+            </div>
+
+            <div class="brand-showcase-card">
+              <div
+                class="brand-showcase-preview"
+                style="background: var(--bg-base)"
+              >
+                <span
+                  style="
+                    font-family: var(--font-heading);
+                    font-size: 1.4rem;
+                    color: var(--text-heading);
+                    letter-spacing: 4px;
+                  "
+                  >HONVRIA</span
+                >
+                <span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 0.6rem;
+                    color: var(--text-muted);
+                    letter-spacing: 3px;
+                    display: block;
+                    margin-top: 4px;
+                  "
+                  >STUDIO</span
+                >
+              </div>
+              <div class="brand-showcase-label">Stacked Lockup</div>
+              <div class="brand-showcase-note">
+                Wordmark with studio descriptor. Used for vertical layouts and
+                formal documents.
+              </div>
+              <!-- REPLACE WITH: <img src="../assets/images/projects/branding/logo-stacked.png" alt="Stacked Lockup"> -->
+            </div>
+
+            <div class="brand-showcase-card">
+              <div class="brand-showcase-preview" style="background: #111">
+                <span
+                  style="
+                    font-family: var(--font-heading);
+                    font-size: 2rem;
+                    color: #555;
+                    letter-spacing: 2px;
+                  "
+                  >HONVRIA</span
+                >
+              </div>
+              <div class="brand-showcase-label">Mono Version</div>
+              <div class="brand-showcase-note">
+                Single-colour version for situations where full colour is not
+                available.
+              </div>
+              <!-- REPLACE WITH: <img src="../assets/images/projects/branding/logo-mono.png" alt="Mono Logo"> -->
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- 03. COLOUR PALETTE -->
+      <section
+        class="section-padding"
+        style="
+          border-top: 1px solid var(--border-subtle);
+          background: var(--bg-raised);
+        "
+      >
+        <div class="container">
+          <span class="section-label reveal-up">03. colour palette</span>
+          <h2 class="section-title reveal-up">Brand colours</h2>
+          <p class="section-subtitle reveal-up">
+            A balanced palette combining deep navy as the anchor with warm cream
+            neutrals and controlled accent colours.
+          </p>
+
+          <div
+            class="reveal-up"
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+              gap: 16px;
+              margin-top: 40px;
+            "
+          >
+            <div class="colour-card">
+              <div class="colour-swatch" style="background: #000080"></div>
+              <div class="colour-name">Navy</div>
+              <div class="colour-hex">#000080</div>
+              <div class="colour-role">Primary</div>
+            </div>
+
+            <div class="colour-card">
+              <div class="colour-swatch" style="background: #000055"></div>
+              <div class="colour-name">Navy Dark</div>
+              <div class="colour-hex">#000055</div>
+              <div class="colour-role">Primary Dark</div>
+            </div>
+
+            <div class="colour-card">
+              <div class="colour-swatch" style="background: #9456ed"></div>
+              <div class="colour-name">Purple</div>
+              <div class="colour-hex">#9456ED</div>
+              <div class="colour-role">Accent</div>
+            </div>
+
+            <div class="colour-card">
+              <div class="colour-swatch" style="background: #b07ff5"></div>
+              <div class="colour-name">Purple Light</div>
+              <div class="colour-hex">#B07FF5</div>
+              <div class="colour-role">Accent</div>
+            </div>
+
+            <div class="colour-card">
+              <div class="colour-swatch" style="background: #56a8f4"></div>
+              <div class="colour-name">Light Blue</div>
+              <div class="colour-hex">#56A8F4</div>
+              <div class="colour-role">Accent</div>
+            </div>
+
+            <div class="colour-card">
+              <div class="colour-swatch" style="background: #ff7abd"></div>
+              <div class="colour-name">Pink</div>
+              <div class="colour-hex">#FF7ABD</div>
+              <div class="colour-role">Accent</div>
+            </div>
+
+            <div class="colour-card">
+              <div
+                class="colour-swatch"
+                style="
+                  background: #f0ebd8;
+                  border: 1px solid var(--border-default);
+                "
+              ></div>
+              <div class="colour-name">Cream</div>
+              <div class="colour-hex">#F0EBD8</div>
+              <div class="colour-role">Neutral</div>
+            </div>
+
+            <div class="colour-card">
+              <div class="colour-swatch" style="background: #e5dfc8"></div>
+              <div class="colour-name">Cream Dark</div>
+              <div class="colour-hex">#E5DFC8</div>
+              <div class="colour-role">Neutral</div>
+            </div>
+
+            <div class="colour-card">
+              <div class="colour-swatch" style="background: #630607"></div>
+              <div class="colour-name">Burgundy</div>
+              <div class="colour-hex">#630607</div>
+              <div class="colour-role">Detail</div>
+            </div>
+
+            <div class="colour-card">
+              <div class="colour-swatch" style="background: #c1a162"></div>
+              <div class="colour-name">Gold</div>
+              <div class="colour-hex">#C1A162</div>
+              <div class="colour-role">Detail</div>
+            </div>
+
+            <div class="colour-card">
+              <div class="colour-swatch" style="background: #0a0a0a"></div>
+              <div class="colour-name">Black</div>
+              <div class="colour-hex">#0A0A0A</div>
+              <div class="colour-role">Text</div>
+            </div>
+
+            <div class="colour-card">
+              <div
+                class="colour-swatch"
+                style="
+                  background: #ffffff;
+                  border: 1px solid var(--border-default);
+                "
+              ></div>
+              <div class="colour-name">White</div>
+              <div class="colour-hex">#FFFFFF</div>
+              <div class="colour-role">Contrast</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04. TYPOGRAPHY -->
+      <section
+        class="section-padding"
+        style="border-top: 1px solid var(--border-subtle)"
+      >
+        <div class="container">
+          <span class="section-label reveal-up">04. typography</span>
+          <h2 class="section-title reveal-up">Type system</h2>
+          <p class="section-subtitle reveal-up">
+            Two typefaces that balance elegance with clarity. Playfair Display
+            for headings, Inter for body text.
+          </p>
+
+          <div
+            class="reveal-up"
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 24px;
+              margin-top: 40px;
+            "
+          >
+            <div class="brand-showcase-card">
+              <div
+                class="brand-showcase-preview"
+                style="
+                  background: var(--bg-base);
+                  flex-direction: column;
+                  align-items: flex-start;
+                  padding: 32px;
+                "
+              >
+                <span
+                  style="
+                    font-family: var(--font-heading);
+                    font-size: 4rem;
+                    color: var(--text-heading);
+                    line-height: 1;
+                  "
+                  >Aa</span
+                >
+                <span
+                  style="
+                    font-family: var(--font-heading);
+                    font-size: 1.5rem;
+                    color: var(--text-primary);
+                    margin-top: 16px;
+                  "
+                  >Playfair Display</span
+                >
+                <span
+                  style="
+                    font-family: var(--font-heading);
+                    font-size: 0.95rem;
+                    color: var(--text-secondary);
+                    margin-top: 8px;
+                    font-style: italic;
+                  "
+                  >The quick brown fox jumps over the lazy dog</span
+                >
+                <span
+                  style="
+                    font-family: var(--font-heading);
+                    font-size: 0.95rem;
+                    color: var(--text-secondary);
+                    margin-top: 4px;
+                  "
+                  >ABCDEFGHIJKLMNOPQRSTUVWXYZ</span
+                >
+                <span
+                  style="
+                    font-family: var(--font-heading);
+                    font-size: 0.95rem;
+                    color: var(--text-secondary);
+                    margin-top: 4px;
+                  "
+                  >abcdefghijklmnopqrstuvwxyz</span
+                >
+                <span
+                  style="
+                    font-family: var(--font-heading);
+                    font-size: 0.95rem;
+                    color: var(--text-secondary);
+                    margin-top: 4px;
+                  "
+                  >0123456789</span
+                >
+              </div>
+              <div class="brand-showcase-label">Headings</div>
+              <div class="brand-showcase-note">
+                Used for all major headings, titles and display text. Weights:
+                Regular, Medium, SemiBold, Bold.
+              </div>
+            </div>
+
+            <div class="brand-showcase-card">
+              <div
+                class="brand-showcase-preview"
+                style="
+                  background: var(--bg-base);
+                  flex-direction: column;
+                  align-items: flex-start;
+                  padding: 32px;
+                "
+              >
+                <span
+                  style="
+                    font-family: var(--font-body);
+                    font-size: 4rem;
+                    color: var(--text-heading);
+                    line-height: 1;
+                    font-weight: 600;
+                  "
+                  >Aa</span
+                >
+                <span
+                  style="
+                    font-family: var(--font-body);
+                    font-size: 1.5rem;
+                    color: var(--text-primary);
+                    margin-top: 16px;
+                    font-weight: 600;
+                  "
+                  >Inter</span
+                >
+                <span
+                  style="
+                    font-family: var(--font-body);
+                    font-size: 0.95rem;
+                    color: var(--text-secondary);
+                    margin-top: 8px;
+                  "
+                  >The quick brown fox jumps over the lazy dog</span
+                >
+                <span
+                  style="
+                    font-family: var(--font-body);
+                    font-size: 0.95rem;
+                    color: var(--text-secondary);
+                    margin-top: 4px;
+                  "
+                  >ABCDEFGHIJKLMNOPQRSTUVWXYZ</span
+                >
+                <span
+                  style="
+                    font-family: var(--font-body);
+                    font-size: 0.95rem;
+                    color: var(--text-secondary);
+                    margin-top: 4px;
+                  "
+                  >abcdefghijklmnopqrstuvwxyz</span
+                >
+                <span
+                  style="
+                    font-family: var(--font-body);
+                    font-size: 0.95rem;
+                    color: var(--text-secondary);
+                    margin-top: 4px;
+                  "
+                  >0123456789</span
+                >
+              </div>
+              <div class="brand-showcase-label">Body Text</div>
+              <div class="brand-showcase-note">
+                Used for all body copy, labels, navigation and UI elements.
+                Weights: Light, Regular, Medium, SemiBold.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05. BRAND APPLICATIONS -->
+      <section
+        class="section-padding"
+        style="
+          border-top: 1px solid var(--border-subtle);
+          background: var(--bg-raised);
+        "
+      >
+        <div class="container">
+          <span class="section-label reveal-up">05. applications</span>
+          <h2 class="section-title reveal-up">Brand in use</h2>
+          <p class="section-subtitle reveal-up">
+            How the identity translates across different touchpoints and
+            contexts.
+          </p>
+
+          <div
+            class="reveal-up"
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+              gap: 20px;
+              margin-top: 40px;
+            "
+          >
+            <div class="brand-showcase-card">
+              <div
+                class="brand-showcase-preview"
+                style="background: #f0ebd8; aspect-ratio: 16/10"
+              >
+                <span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 0.75rem;
+                    color: #999;
+                  "
+                  >Stationery Mockup</span
+                >
+              </div>
+              <div class="brand-showcase-label">Stationery</div>
+              <div class="brand-showcase-note">
+                Business cards, letterheads and envelopes.
+              </div>
+              <!-- REPLACE WITH: <img src="../assets/images/projects/branding/app-stationery.jpg" alt="Stationery"> -->
+            </div>
+
+            <div class="brand-showcase-card">
+              <div
+                class="brand-showcase-preview"
+                style="background: #000080; aspect-ratio: 16/10"
+              >
+                <span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 0.75rem;
+                    color: rgba(255, 255, 255, 0.4);
+                  "
+                  >Social Media</span
+                >
+              </div>
+              <div class="brand-showcase-label">Social Media</div>
+              <div class="brand-showcase-note">
+                Profile images, post templates and story formats.
+              </div>
+              <!-- REPLACE WITH: <img src="../assets/images/projects/branding/app-social.jpg" alt="Social Media"> -->
+            </div>
+
+            <div class="brand-showcase-card">
+              <div
+                class="brand-showcase-preview"
+                style="background: var(--bg-base); aspect-ratio: 16/10"
+              >
+                <span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 0.75rem;
+                    color: var(--text-muted);
+                  "
+                  >Digital Presence</span
+                >
+              </div>
+              <div class="brand-showcase-label">Digital</div>
+              <div class="brand-showcase-note">
+                Website header, favicon and email signature.
+              </div>
+              <!-- REPLACE WITH: <img src="../assets/images/projects/branding/app-digital.jpg" alt="Digital"> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLOSING -->
+      <section
+        class="section-padding"
+        style="border-top: 1px solid var(--border-subtle); text-align: center"
+      >
+        <div class="container">
+          <div class="reveal-up">
+            <span
+              style="
+                font-family: var(--font-heading);
+                font-size: clamp(1.8rem, 3vw, 2.5rem);
+                color: var(--text-heading);
+                display: block;
+                margin-bottom: 12px;
+              "
+              >Honvria Studio</span
+            >
+            <span
+              style="
+                font-family: var(--font-mono);
+                font-size: 0.78rem;
+                color: var(--text-muted);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+              "
+              >Built on values. Driven by creativity.</span
+            >
+          </div>
+          <div style="margin-top: 40px">
+            <a href="../work.html" class="btn btn-outline"
+              >Back to All Projects</a
+            >
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Script loading for mobile menu function -->
+    <div id="footer-placeholder"></div>
     <script src="../js/main.js"></script>
   </body>
 </html>

@@ -3,549 +3,406 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Clarence Emrys Lion | Full-Stack Developer &amp; Creative Technologist
-    </title>
+    <title>Clarence.R | Developer & Creative Technologist</title>
     <meta
       name="description"
-      content="Portfolio of Clarence Emrys Lion: Self-taught Web & App Developer based in Stellenbosch / Cape Town. Node.js, TypeScript, Python, Tailwind, and custom code-first WordPress architecture."
+      content="Full-stack developer and creative technologist based in Cape Town, South Africa. Building functional, hand-crafted digital experiences with Node.js, TypeScript, Python and modern web technologies."
     />
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <meta property="og:title" content="Clarence.R | Developer & Designer" />
+    <meta
+      property="og:description"
+      content="Clean, performant web applications and digital experiences from Stellenbosch, South Africa."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://emrys25.github.io/Clarence-Portfolio/"
+    />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Clarence Emrys Lion",
+        "alternateName": "Clarence.R",
+        "jobTitle": "Developer & Designer",
+        "url": "https://emrys25.github.io/Clarence-Portfolio/",
+        "email": "emryslion@proton.me",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Stellenbosch",
+          "addressRegion": "Western Cape",
+          "addressCountry": "ZA"
+        },
+        "sameAs": ["https://github.com/Emrys25"]
+      }
+    </script>
+
+    <meta name="author" content="Clarence Ruwizhi" />
+    <meta name="base-path" content="" />
+    <meta property="og:title" content="Clarence.R | Developer Portfolio" />
+    <meta
+      property="og:description"
+      content="Full-stack developer and creative technologist based in Cape Town."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://emrys25.github.io/Clarence-Portfolio/"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <!-- UNIVERSAL HEADER -->
-    <header class="site-header" id="site-header">
-      <nav class="nav-container" role="navigation" aria-label="Main navigation">
-        <a href="index.html" class="nav-logo" aria-label="Home">
-          <span>clarence</span><span class="logo-mark">.dev</span>
-        </a>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="work.html" class="nav-link">Projects</a></li>
-          <li><a href="experience.html" class="nav-link">Experience</a></li>
-          <li><a href="skills.html" class="nav-link">Stack</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="nav-actions">
-          <a href="cv.html" class="btn btn-nav-cv">Download CV</a>
-          <button
-            class="mobile-menu-toggle"
-            id="mobile-menu-toggle"
-            aria-label="Toggle navigation menu"
-            aria-expanded="false"
+  <body class="has-grid-bg">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Animated background layers -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-noise" aria-hidden="true"></div>
+    <div class="bg-floaters" aria-hidden="true">
+      <span class="floater f1">const</span>
+      <span class="floater f2">async</span>
+      <span class="floater f3">&lt;/&gt;</span>
+      <span class="floater f4">{ }</span>
+      <span class="floater f5">=&gt;</span>
+      <span class="floater f6">404</span>
+      <span class="floater f7">npm i</span>
+      <span class="floater f8">git push</span>
+      <span class="floater f9">true</span>
+      <span class="floater f10">null</span>
+    </div>
+
+    <div id="header-placeholder"></div>
+
+    <main id="main-content">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-terminal reveal-up">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-path">~/clarence.r</span>
+            <span class="terminal-prompt">$</span>
+            <span class="terminal-cmd">whoami</span>
+            <span class="terminal-cursor"></span>
+          </div>
+          <h1 class="hero-title reveal-up">
+            I build things<br />for the <span class="accent">web</span>.
+          </h1>
+          <p class="hero-subtitle reveal-up">
+            Full-stack developer and creative technologist crafting functional,
+            performant digital experiences from Cape Town, South Africa.
+          </p>
+          <div class="hero-actions reveal-up">
+            <a href="work.html" class="btn btn-primary">View Projects</a>
+            <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+          </div>
+          <div class="hero-stack reveal-up">
+            <span class="stack-label">Currently working with:</span>
+            <span class="stack-item">Node.js</span>
+            <span class="stack-item">TypeScript</span>
+            <span class="stack-item">Python</span>
+            <span class="stack-item">Tailwind</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECH STACK -->
+      <section class="tech-stack section-padding">
+        <div class="container">
+          <span class="section-label reveal-up">capabilities</span>
+          <h2 class="section-title reveal-up">Tech Stack</h2>
+          <p class="section-subtitle reveal-up">
+            Technologies and tools I use to bring ideas to life.
+          </p>
+          <div class="stack-grid reveal-up">
+            <div class="stack-card">
+              <h3>Frontend</h3>
+              <ul>
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>TypeScript</li>
+                <li>Tailwind CSS</li>
+              </ul>
+            </div>
+            <div class="stack-card">
+              <h3>Backend</h3>
+              <ul>
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>REST APIs</li>
+              </ul>
+            </div>
+            <div class="stack-card">
+              <h3>CMS & Platforms</h3>
+              <ul>
+                <li>WordPress (Custom)</li>
+                <li>GitHub Pages</li>
+              </ul>
+            </div>
+            <div class="stack-card">
+              <h3>Tools & Design</h3>
+              <ul>
+                <li>Git & GitHub</li>
+                <li>VS Code</li>
+                <li>Figma</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED DEV PROJECTS (6) -->
+      <section class="featured-projects section-padding">
+        <div class="container">
+          <span class="section-label reveal-up">selected work</span>
+          <h2 class="section-title reveal-up">Featured Projects</h2>
+          <p class="section-subtitle reveal-up">
+            Six full-stack development projects spanning SaaS platforms,
+            real-time tools, AI integrations and business utilities.
+          </p>
+          <div
+            class="projects-grid"
+            style="margin-top: 40px; margin-bottom: 40px"
           >
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
-        </div>
-      </nav>
-      <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-        <ul class="mobile-nav-links">
-          <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-          <li><a href="about.html" class="mobile-nav-link">About</a></li>
-          <li><a href="work.html" class="mobile-nav-link">Projects</a></li>
-          <li>
-            <a href="experience.html" class="mobile-nav-link">Experience</a>
-          </li>
-          <li><a href="skills.html" class="mobile-nav-link">Stack</a></li>
-          <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-          <li><a href="cv.html" class="mobile-nav-link">Download CV</a></li>
-        </ul>
-      </div>
-    </header>
-
-    <main>
-      <!-- HERO SECTION -->
-      <section class="hero-section">
-        <div class="container">
-          <div class="hero-grid">
-            <div class="hero-content">
-              <div class="hero-badge">
-                <span class="status-dot"></span> Available for Web &amp; App
-                Projects
-              </div>
-              <h1 class="hero-title">
-                Engineering web apps &amp;
-                <span>hand-crafted digital systems</span>
-              </h1>
-              <p class="hero-description">
-                I am Clarence Emrys Lion: a self-taught full-stack developer and
-                founder of Honvria Studio based in Stellenbosch, South Africa. I
-                engineer high-speed applications using TypeScript, Node.js,
-                Python, Tailwind, and custom plugin-free WordPress architecture.
-              </p>
-              <div class="hero-cta">
-                <a href="work.html" class="btn btn-primary"
-                  >View Applications</a
-                >
-                <a href="contact.html" class="btn btn-secondary"
-                  >Get in Touch</a
-                >
-              </div>
-            </div>
-
-            <!-- TERMINAL CODE SNIPPET -->
-            <div class="code-window">
-              <div class="code-header">
-                <div class="code-dots">
-                  <span class="code-dot dot-red"></span>
-                  <span class="code-dot dot-yellow"></span>
-                  <span class="code-dot dot-green"></span>
+            <!-- 1. CEAR -->
+            <article class="project-card reveal-up">
+              <a href="projects/cear.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>SaaS Booking Platform</span>
+                  </div>
                 </div>
-                <span class="code-title">developer-profile.ts</span>
-              </div>
-              <div class="code-body">
-                <p>
-                  <span class="code-keyword">const</span>
-                  <span class="code-var">developer</span> = {
-                </p>
-                <p>
-                  &nbsp;&nbsp;name:
-                  <span class="code-string">"Clarence Emrys Lion"</span>,
-                </p>
-                <p>
-                  &nbsp;&nbsp;role:
-                  <span class="code-string"
-                    >"Full-Stack Developer &amp; Founder"</span
-                  >,
-                </p>
-                <p>
-                  &nbsp;&nbsp;location:
-                  <span class="code-string">"Stellenbosch, South Africa"</span>,
-                </p>
-                <p>
-                  &nbsp;&nbsp;activeStack: [<span class="code-string"
-                    >"Node.js"</span
-                  >, <span class="code-string">"TypeScript"</span>,
-                  <span class="code-string">"Python"</span>,
-                  <span class="code-string">"Tailwind"</span>],
-                </p>
-                <p>
-                  &nbsp;&nbsp;philosophy:
-                  <span class="code-string"
-                    >"Clean code, zero page builders, maximum performance"</span
-                  >,
-                </p>
-                <p>
-                  &nbsp;&nbsp;status: <span class="code-func">function</span>()
-                  {
-                </p>
-                <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword"
-                    >return</span
-                  >
-                  <span class="code-string"
-                    >"Building custom apps and offline-first WP themes"</span
-                  >;
-                </p>
-                <p>&nbsp;&nbsp;}</p>
-                <p>};</p>
-                <p>
-                  <span class="code-comment"
-                    >// Executing studio engine...</span
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CORE TECHNICAL DISCIPLINE SHOWCASE -->
-      <section class="section">
-        <div class="container">
-          <div class="section-header">
-            <p class="section-subtitle">01 / TECHNICAL HIERARCHY</p>
-            <h2 class="section-title">
-              Built with code, <span>not page builders</span>
-            </h2>
-          </div>
-
-          <div class="projects-grid">
-            <!-- PRIMARY 1: WEB & APP DEV -->
-            <article class="project-card">
-              <div class="card-top">
-                <span class="priority-badge badge-primary-dev"
-                  >Primary Priority: 01</span
-                >
-                <h3 class="card-title">Full-Stack Application Development</h3>
-                <p class="card-description">
-                  Building custom applications with TypeScript, Node.js backend
-                  services, Python data scripts, and responsive Tailwind CSS UI
-                  components.
-                </p>
-                <div class="tag-group">
-                  <span class="tag">Node.js</span>
-                  <span class="tag">TypeScript</span>
-                  <span class="tag">Python</span>
-                  <span class="tag">Tailwind CSS</span>
-                </div>
-              </div>
-              <div class="card-meta">
-                <span class="text-muted" style="font-size: 0.8rem"
-                  >Active Application Project</span
-                >
-                <a href="work.html" class="card-link"
-                  >View Architecture &rarr;</a
-                >
-              </div>
-            </article>
-
-            <!-- PRIMARY 2: CODE-FIRST WORDPRESS -->
-            <article class="project-card">
-              <div class="card-top">
-                <span class="priority-badge badge-primary-dev"
-                  >Primary Priority: 02</span
-                >
-                <h3 class="card-title">Custom Native WordPress Architecture</h3>
-                <p class="card-description">
-                  Hand-coded WordPress theme development created entirely
-                  offline in HTML, CSS, JavaScript, and PHP. Zero Elementor,
-                  zero heavy plugins, and instant load speeds.
-                </p>
-                <div class="tag-group">
-                  <span class="tag">Native PHP</span>
-                  <span class="tag">WordPress Hooks</span>
-                  <span class="tag">Vanilla JS</span>
-                  <span class="tag">No-Builder</span>
-                </div>
-              </div>
-              <div class="card-meta">
-                <span class="text-muted" style="font-size: 0.8rem"
-                  >Custom Theme Workflow</span
-                >
-                <a href="work.html" class="card-link"
-                  >Explore Theme Code &rarr;</a
-                >
-              </div>
-            </article>
-
-            <!-- SECONDARY: WEB DESIGN & UI SYSTEM -->
-            <article class="project-card">
-              <div class="card-top">
-                <span class="priority-badge badge-secondary-web"
-                  >Secondary Priority: 03</span
-                >
-                <h3 class="card-title">Web Design &amp; UI Systems</h3>
-                <p class="card-description">
-                  Designing clean, dark-mode, editorially driven UI layouts
-                  focused on accessibility, micro-interactions, responsive
-                  typography grids, and conversion logic.
-                </p>
-                <div class="tag-group">
-                  <span class="tag tag-purple">UI / UX</span>
-                  <span class="tag tag-purple">Design Systems</span>
-                  <span class="tag tag-purple">Wireframing</span>
-                </div>
-              </div>
-              <div class="card-meta">
-                <span class="text-muted" style="font-size: 0.8rem"
-                  >Visual Architecture</span
-                >
-                <a href="work.html" class="card-link">View Layouts &rarr;</a>
-              </div>
-            </article>
-
-            <!-- TERTIARY: GRAPHIC DESIGN & BRAND IDENTITY -->
-            <article class="project-card">
-              <div class="card-top">
-                <span class="priority-badge badge-tertiary-graphic"
-                  >Tertiary Priority: 04</span
-                >
-                <h3 class="card-title">Graphic Design &amp; Brand Systems</h3>
-                <p class="card-description">
-                  Crafting visual identities, logo marks, typography standards,
-                  and visual language systems through Honvria Studio.
-                </p>
-                <div class="tag-group">
-                  <span class="tag tag-pink">Brand Identity</span>
-                  <span class="tag tag-pink">Typography</span>
-                  <span class="tag tag-pink">Vector Assets</span>
-                </div>
-              </div>
-              <div class="card-meta">
-                <span class="text-muted" style="font-size: 0.8rem"
-                  >Case Study Available</span
-                >
-                <a href="projects/brand-identity.html" class="card-link"
-                  >View Identity Case Study &rarr;</a
-                >
-              </div>
-            </article>
-          </div>
-
-          <!-- SPECIAL FEATURE WORKFLOW BOX -->
-          <div class="wp-workflow-box">
-            <div>
-              <span class="priority-badge badge-primary-dev"
-                >Engineering Standard</span
-              >
-              <h3 class="workflow-title">
-                Why I Avoid Page Builders Like Elementor
-              </h3>
-              <p
-                style="
-                  color: var(--text-muted);
-                  line-height: 1.7;
-                  font-size: 0.95rem;
-                "
-              >
-                Many sites suffer from slow speeds and security flaws caused by
-                stacking heavy page builders and dozens of third-party plugins.
-                My development process is strictly code-first.
-              </p>
-            </div>
-            <div class="workflow-list">
-              <div class="workflow-item">
-                <span class="workflow-icon">&#10003;</span>
-                <span>100% Custom PHP, HTML5 &amp; CSS Theme Structure</span>
-              </div>
-              <div class="workflow-item">
-                <span class="workflow-icon">&#10003;</span>
-                <span>Clean Code Base Built Offline &amp; Deployed Direct</span>
-              </div>
-              <div class="workflow-item">
-                <span class="workflow-icon">&#10003;</span>
-                <span
-                  >Near-Instant Lighthouse Speed &amp; Performance Scores</span
-                >
-              </div>
-              <div class="workflow-item">
-                <span class="workflow-icon">&#10003;</span>
-                <span>Zero Reliance on Heavy Third-Party Plugins</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SUPPORTING MEDIA DISCIPLINE CARDS -->
-      <section class="section">
-        <div class="container">
-          <div class="section-header">
-            <p class="section-subtitle">
-              02 / SUPPORTING MULTIMEDIA DISCIPLINE
-            </p>
-            <h2 class="section-title">
-              Complementary creative <span>capabilities</span>
-            </h2>
-          </div>
-
-          <div class="supporting-grid">
-            <div class="supporting-card">
-              <span class="priority-badge badge-supporting"
-                >Supporting Discipline</span
-              >
-              <h4 style="font-size: 1.1rem; margin-bottom: 0.4rem">
-                Photography
-              </h4>
-              <p style="font-size: 0.85rem; color: var(--text-muted)">
-                Commercial, lifestyle, product, and architectural visual assets
-                tailored for digital platforms.
-              </p>
-            </div>
-
-            <div class="supporting-card">
-              <span class="priority-badge badge-supporting"
-                >Supporting Discipline</span
-              >
-              <h4 style="font-size: 1.1rem; margin-bottom: 0.4rem">
-                Videography &amp; Motion
-              </h4>
-              <p style="font-size: 0.85rem; color: var(--text-muted)">
-                Digital content clips, social media campaign edits, and
-                interactive motion presentation.
-              </p>
-            </div>
-
-            <div class="supporting-card">
-              <span class="priority-badge badge-supporting"
-                >Supporting Discipline</span
-              >
-              <h4 style="font-size: 1.1rem; margin-bottom: 0.4rem">
-                Print &amp; Editorial Layout
-              </h4>
-              <p style="font-size: 0.85rem; color: var(--text-muted)">
-                Tactile publication design, brand collateral, print-ready vector
-                artwork, and typography grids.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT SECTION -->
-      <section class="section contact-section">
-        <div class="container">
-          <div class="contact-grid">
-            <div>
-              <p class="section-subtitle">03 / CONTACT &amp; COLLABORATION</p>
-              <h2 class="contact-info-title">
-                Let's build something <span>extraordinary</span>
-              </h2>
-              <p class="contact-info-p">
-                Whether you need a custom web application built from scratch, a
-                plugin-free WordPress site, or complete creative direction, send
-                a message directly.
-              </p>
-              <div class="contact-detail-item">
-                <div class="contact-detail-icon">@</div>
-                <div>
-                  <p style="font-size: 0.8rem; color: var(--text-dim)">
-                    Direct Email
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">Node.js</span>
+                    <span class="tag tag-dev">TypeScript</span>
+                    <span class="tag tag-dev">Next.js</span>
+                  </div>
+                  <h3>Cear</h3>
+                  <p>
+                    Multi-tenant SaaS appointment booking platform with atomic
+                    slot-holding, global payment integration and complete admin
+                    dashboard.
                   </p>
-                  <a
-                    href="mailto:emryslion@proton.me"
-                    style="color: var(--text-main); font-weight: 600"
-                    >emryslion@proton.me</a
+                  <span class="project-status status-progress"
+                    >In Progress</span
                   >
                 </div>
-              </div>
-              <div class="contact-detail-item">
-                <div class="contact-detail-icon">LOC</div>
-                <div>
-                  <p style="font-size: 0.8rem; color: var(--text-dim)">
-                    Location
-                  </p>
-                  <p style="color: var(--text-main); font-weight: 500">
-                    Stellenbosch / Cape Town, Western Cape, SA
-                  </p>
-                </div>
-              </div>
-            </div>
+              </a>
+            </article>
 
-            <!-- FORM WITH DUAL SUBMIT (EMAIL + WHATSAPP) -->
-            <form
-              action="https://formsubmit.co/emryslion@proton.me"
-              method="POST"
-              id="contactForm"
-              class="contact-form"
+            <!-- 2. URL SHORTENER -->
+            <article class="project-card reveal-up">
+              <a href="projects/url-shortener.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>URL Shortener</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">Node.js</span>
+                    <span class="tag tag-dev">Redis</span>
+                    <span class="tag tag-dev">PostgreSQL</span>
+                  </div>
+                  <h3>URL Shortener with Analytics</h3>
+                  <p>
+                    Link shortening service with click tracking, referrer data,
+                    date-based stats, rate limiting and caching.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- 3. WEBHOOK INSPECTOR -->
+            <article class="project-card reveal-up">
+              <a href="projects/webhook-inspector.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>Webhook Inspector</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">WebSockets</span>
+                    <span class="tag tag-dev">SSE</span>
+                    <span class="tag tag-dev">Node.js</span>
+                  </div>
+                  <h3>Webhook Inspector</h3>
+                  <p>
+                    Real-time webhook debugging tool. Generate a unique URL and
+                    watch incoming payloads appear live in the UI.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- 4. UPTIME MONITOR -->
+            <article class="project-card reveal-up">
+              <a href="projects/uptime-monitor.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>Uptime Monitor</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">Cron</span>
+                    <span class="tag tag-dev">Discord API</span>
+                    <span class="tag tag-dev">Node.js</span>
+                  </div>
+                  <h3>Uptime Monitor & Status Page</h3>
+                  <p>
+                    HTTP health checks with email and Discord alerts on
+                    downtime, plus a public status dashboard.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- 5. AI TOOL -->
+            <article class="project-card reveal-up">
+              <a href="projects/ai-tool.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>AI-Powered Tool</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">Python</span>
+                    <span class="tag tag-dev">OpenAI</span>
+                    <span class="tag tag-dev">Streaming</span>
+                  </div>
+                  <h3>AI-Powered Writing Tool</h3>
+                  <p>
+                    Focused AI utility with streaming responses, prompt
+                    engineering, rate limiting and cost protection.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- 6. INVOICE GENERATOR -->
+            <article class="project-card reveal-up">
+              <a href="projects/invoice-generator.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>Invoice Generator</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">TypeScript</span>
+                    <span class="tag tag-dev">PDF</span>
+                    <span class="tag tag-dev">Node.js</span>
+                  </div>
+                  <h3>Invoice Generator for Freelancers</h3>
+                  <p>
+                    Client management, line items, automatic totals, PDF preview
+                    and download, and payment status tracking.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div style="text-align: center">
+            <a href="work.html" class="btn btn-outline"
+              >View All Work (Design, Branding, Media)</a
             >
-              <input
-                type="hidden"
-                name="_subject"
-                value="New Portfolio Developer Inquiry"
-              />
-              <input type="hidden" name="_captcha" value="false" />
-              <input
-                type="hidden"
-                name="_next"
-                value="https://emrys25.github.io/Clarence-Portfolio/contact.html"
-              />
+          </div>
+        </div>
+      </section>
 
-              <div class="form-group">
-                <label for="name">Full Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="e.g. Sarah Jenkins"
-                  required
-                />
+      <!-- ABOUT PREVIEW -->
+      <section class="about-preview section-padding">
+        <div class="container">
+          <span class="section-label reveal-up">about</span>
+          <h2 class="section-title reveal-up">A bit about me</h2>
+          <div class="about-grid">
+            <div class="about-text reveal-up">
+              <p>
+                I am a self-taught developer and creative technologist based in
+                Stellenbosch, Cape Town.
+              </p>
+              <p>
+                I build everything from scratch. No page builders, no plugin
+                stacks, no shortcuts. Every line of code is intentional, every
+                design decision is purposeful.
+              </p>
+              <p>
+                My background spans web development, brand identity, graphic
+                design and digital production. This cross-disciplinary
+                experience means I approach every project with both technical
+                precision and creative vision.
+              </p>
+              <a
+                href="about.html"
+                class="btn btn-outline"
+                style="margin-top: 12px"
+                >Read More</a
+              >
+            </div>
+            <div class="about-stats reveal-up">
+              <div class="stat-card">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Dev Projects</div>
               </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="e.g. sarah@company.com"
-                  required
-                />
+              <div class="stat-card">
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Years Creative</div>
               </div>
-              <div class="form-group">
-                <label for="subject">Project Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder="e.g. Web Application Development"
-                  required
-                />
+              <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Hand-Coded</div>
               </div>
-              <div class="form-group">
-                <label for="message">Project Description</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  placeholder="Briefly describe your project requirements..."
-                  required
-                ></textarea>
+              <div class="stat-card">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Page Builders</div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div class="form-actions">
-                <button type="submit" class="btn btn-primary">
-                  Send via Email
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-whatsapp"
-                  onclick="sendToWhatsApp()"
-                >
-                  Send via WhatsApp
-                </button>
-              </div>
-            </form>
+      <!-- CTA -->
+      <section class="cta-section section-padding">
+        <div class="container">
+          <span class="section-label reveal-up">let's connect</span>
+          <h2 class="section-title reveal-up">Have a project in mind?</h2>
+          <p class="section-subtitle reveal-up">
+            I am always open to discussing new projects, creative ideas or
+            opportunities to be part of your vision.
+          </p>
+          <div class="cta-actions reveal-up">
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            <a href="mailto:emryslion@proton.me" class="btn btn-outline"
+              >emryslion@proton.me</a
+            >
           </div>
         </div>
       </section>
     </main>
 
-    <!-- UNIVERSAL FOOTER -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <span class="footer-logo">Clarence Emrys Lion</span>
-            <p class="footer-description">
-              Full-stack developer and multimedia creative based in
-              Stellenbosch, South Africa.
-            </p>
-          </div>
-          <div>
-            <h4 class="footer-heading">Navigation</h4>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="work.html">Projects</a></li>
-              <li><a href="skills.html">Tech Stack</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="cv.html">CV Page</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="footer-heading">Direct Contact</h4>
-            <ul class="footer-links">
-              <li>
-                <a href="mailto:emryslion@proton.me">emryslion@proton.me</a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/Emrys25"
-                  target="_blank"
-                  rel="noopener"
-                  >GitHub Profile</a
-                >
-              </li>
-              <li>Stellenbosch, Western Cape</li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>
-            &copy; <span id="current-year">2026</span> Clarence Emrys Lion. All
-            rights reserved.
-          </p>
-          <p class="footer-honvria">
-            Studio Architecture by
-            <a href="projects/brand-identity.html">Honvria Studio</a>
-          </p>
-        </div>
-      </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <script src="js/main.js"></script>
   </body>

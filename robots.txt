@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://emrys25.github.io/Clarence-Portfolio/sitemap.xml

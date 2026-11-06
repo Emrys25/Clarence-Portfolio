@@ -3,235 +3,595 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Selected Work & Portfolio | Clarence Ruwizhi</title>
+    <title>Work | Clarence.R</title>
     <meta
       name="description"
-      content="Explore selected creative projects by Clarence Ruwizhi, including brand identity systems, web platforms, prepress print work, and commercial media."
+      content="Web development projects, brand identity, graphic design, photography, video and print production by Clarence Emrys Lion."
     />
 
-    <!-- Open Graph -->
-    <meta
-      property="og:title"
-      content="Selected Work & Portfolio | Clarence Ruwizhi"
-    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <meta property="og:title" content="Work | Clarence.R" />
     <meta
       property="og:description"
-      content="Multidisciplinary creative portfolio showcasing branding, web development, print production, and photography."
+      content="Development projects, web design, branding, and creative work by Clarence.R."
     />
-    <meta property="og:image" content="assets/images/og-image.jpg" />
     <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://emrys25.github.io/Clarence-Portfolio/work.html"
+    />
+    <meta name="twitter:card" content="summary" />
 
-    <!-- Fonts -->
+    <meta name="base-path" content="" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation -->
-    <header class="site-header">
-      <div class="container nav-container">
-        <a href="index.html" class="brand-logo">
-          <span class="logo-text">Honvria</span>
-          <span class="logo-subtext">Studio</span>
-        </a>
-        <nav class="main-nav" aria-label="Main Navigation">
-          <ul class="nav-list">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="work.html" class="nav-link active">Work</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="experience.html" class="nav-link">Experience</a></li>
-            <li><a href="skills.html" class="nav-link">Skills</a></li>
-            <li><a href="cv.html" class="nav-link">CV</a></li>
-            <li><a href="contact.html" class="nav-link nav-btn">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main id="main-content">
-      <!-- Page Header -->
-      <section class="page-header">
+      <!-- PAGE HEADER -->
+      <section
+        class="section-padding"
+        style="padding-top: calc(56px + var(--section-padding))"
+      >
         <div class="container">
-          <h1 class="page-title">Selected Work</h1>
-          <p class="page-subtitle">
-            A collection of brand identity case studies, custom web platforms,
-            print prepress engineering, and commercial media projects.
+          <span class="section-label reveal-up">portfolio</span>
+          <h1 class="section-title reveal-up">Selected Work</h1>
+          <p class="section-subtitle reveal-up">
+            Full-stack development projects, creative work and production.
+            Development is my primary focus, with design, branding and media as
+            supporting disciplines.
           </p>
         </div>
       </section>
 
-      <!-- Projects Grid Section -->
-      <section class="section">
+      <!-- ==========================================
+             DEVELOPMENT PROJECTS (Primary)
+             ========================================== -->
+      <section class="section-padding" style="padding-top: 0" id="development">
         <div class="container">
-          <div class="projects-grid">
-            <!-- Card 1: Honvria Studio Brand Identity -->
-            <article class="project-card" data-category="branding">
-              <div class="project-thumb">
-                <img
-                  src="assets/images/projects/branding/hero.jpg"
-                  alt="Honvria Studio Visual Identity"
-                />
-                <span class="project-category-tag">Branding & Strategy</span>
-              </div>
-              <div class="project-card-content">
-                <h3 class="project-card-title">
-                  Honvria Studio Visual Identity
-                </h3>
-                <p class="project-card-excerpt">
-                  A complete editorial brand identity case study covering visual
-                  strategy, logo design, color systems, typography, and
-                  marketing collateral designed for digital and print
-                  environments.
-                </p>
-                <a href="projects/brand-identity.html" class="btn-link"
-                  >View Case Study &rarr;</a
-                >
-              </div>
+          <span class="section-label reveal-up">development</span>
+          <h2 class="section-title reveal-up">Web & Application Development</h2>
+          <p class="section-subtitle reveal-up" style="margin-bottom: 40px">
+            Full-stack applications built with Node.js, TypeScript, Python and
+            modern web technologies. Hand-coded, no shortcuts.
+          </p>
+
+          <div class="projects-grid" id="dev-grid">
+            <!-- 1. CEAR -->
+            <article class="project-card reveal-up" data-category="development">
+              <a href="projects/cear.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>SaaS Booking Platform</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">Node.js</span>
+                    <span class="tag tag-dev">TypeScript</span>
+                    <span class="tag tag-dev">Next.js</span>
+                    <span class="tag tag-dev">Paystack</span>
+                  </div>
+                  <h3>Cear</h3>
+                  <p>
+                    Embeddable, multi-tenant SaaS appointment booking platform.
+                    Atomic slot-holding, global payment integration, complete
+                    admin dashboard and industry-agnostic service configuration.
+                  </p>
+                  <span class="project-status status-progress"
+                    >In Progress</span
+                  >
+                </div>
+              </a>
             </article>
 
-            <!-- Card 2: Web Design & Development -->
-            <article class="project-card" data-category="web">
-              <div class="project-thumb">
-                <img
-                  src="assets/images/projects/web/thumb.jpg"
-                  alt="WordPress Platform Development"
-                />
-                <span class="project-category-tag">Web Design & Dev</span>
-              </div>
-              <div class="project-card-content">
-                <h3 class="project-card-title">
-                  WordPress & Custom Web Platforms
-                </h3>
-                <p class="project-card-excerpt">
-                  Responsive, high-performance web systems built with Elementor,
-                  custom CSS, and clean frontend architecture optimized for user
-                  engagement and clarity.
-                </p>
-                <a href="projects/website-sample.html" class="btn-link"
-                  >View Project &rarr;</a
-                >
-              </div>
+            <!-- 2. URL SHORTENER -->
+            <article class="project-card reveal-up" data-category="development">
+              <a href="projects/url-shortener.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>URL Shortener</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">Node.js</span>
+                    <span class="tag tag-dev">Redis</span>
+                    <span class="tag tag-dev">PostgreSQL</span>
+                  </div>
+                  <h3>URL Shortener with Click Analytics</h3>
+                  <p>
+                    Link shortening service with redirect tracking, click
+                    analytics, referrer data and date-based stats. Includes rate
+                    limiting, caching and basic authentication.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
             </article>
 
-            <!-- Card 3: Prepress & Technical Print Production -->
-            <article class="project-card" data-category="print">
-              <div class="project-thumb">
-                <img
-                  src="assets/images/projects/branding/app-print.jpg"
-                  alt="LimeInc Tech Prepress and Print Production"
-                />
-                <span class="project-category-tag">Print Production</span>
-              </div>
-              <div class="project-card-content">
-                <h3 class="project-card-title">
-                  LimeInc.Tech Prepress & Technical Print
-                </h3>
-                <p class="project-card-excerpt">
-                  Color separation, die-cut packaging specs, spot-color
-                  separations, and large format print management executed with
-                  industrial precision.
-                </p>
-                <a href="projects/print-sample.html" class="btn-link"
-                  >View Project &rarr;</a
-                >
-              </div>
+            <!-- 3. WEBHOOK INSPECTOR -->
+            <article class="project-card reveal-up" data-category="development">
+              <a href="projects/webhook-inspector.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>Webhook Inspector</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">Node.js</span>
+                    <span class="tag tag-dev">WebSockets</span>
+                    <span class="tag tag-dev">SSE</span>
+                  </div>
+                  <h3>Webhook Inspector</h3>
+                  <p>
+                    Real-time webhook debugging tool. Generate a unique URL,
+                    send any request to it and watch the payload appear live in
+                    the UI. Auto-deletes data after 24 hours.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
             </article>
 
-            <!-- Card 4: CoffeeMM Barista Battle Campaign -->
-            <article class="project-card" data-category="branding">
-              <div class="project-thumb">
-                <img
-                  src="assets/images/projects/branding/gallery-4.jpg"
-                  alt="CoffeeMM Barista Battle Campaign"
-                />
-                <span class="project-category-tag">Campaign & Event</span>
-              </div>
-              <div class="project-card-content">
-                <h3 class="project-card-title">
-                  CoffeeMM Barista Battle Visual Campaign
-                </h3>
-                <p class="project-card-excerpt">
-                  End-to-end event branding, social media assets, print banners,
-                  and promotional artwork for a live competitive coffee event.
-                </p>
-                <a href="projects/branding-sample.html" class="btn-link"
-                  >View Project &rarr;</a
-                >
-              </div>
+            <!-- 4. UPTIME MONITOR -->
+            <article class="project-card reveal-up" data-category="development">
+              <a href="projects/uptime-monitor.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>Uptime Monitor</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">Node.js</span>
+                    <span class="tag tag-dev">Cron</span>
+                    <span class="tag tag-dev">Discord API</span>
+                  </div>
+                  <h3>Uptime Monitor & Status Page</h3>
+                  <p>
+                    HTTP uptime monitoring with scheduled health checks, email
+                    and Discord alerts on downtime, and a public-facing status
+                    dashboard.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
             </article>
 
-            <!-- Card 5: Photography & Visual Content -->
-            <article class="project-card" data-category="photography">
-              <div class="project-thumb">
-                <img
-                  src="assets/images/projects/branding/art-dir-2.jpg"
-                  alt="Commercial Photography"
-                />
-                <span class="project-category-tag">Photography</span>
-              </div>
-              <div class="project-card-content">
-                <h3 class="project-card-title">
-                  Commercial & Event Photography
-                </h3>
-                <p class="project-card-excerpt">
-                  Professional photography focusing on composition, lighting,
-                  subject direction, color grading, and post-production
-                  processing.
-                </p>
-                <a href="projects/photography-sample.html" class="btn-link"
-                  >View Project &rarr;</a
-                >
-              </div>
+            <!-- 5. AI TOOL -->
+            <article class="project-card reveal-up" data-category="development">
+              <a href="projects/ai-tool.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>AI-Powered Tool</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">Python</span>
+                    <span class="tag tag-dev">OpenAI API</span>
+                    <span class="tag tag-dev">Streaming</span>
+                  </div>
+                  <h3>AI-Powered Writing Tool</h3>
+                  <p>
+                    Focused AI utility with streaming responses, third-party API
+                    integration, prompt engineering, rate limiting and cost
+                    protection. One feature, done well.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
             </article>
 
-            <!-- Card 6: 3D Product Renders & Visual Assets -->
-            <article class="project-card" data-category="3d">
-              <div class="project-thumb">
-                <img
-                  src="assets/images/projects/branding/disc-graphic.jpg"
-                  alt="3D Product Renderings"
-                />
-                <span class="project-category-tag">3D Rendering</span>
-              </div>
-              <div class="project-card-content">
-                <h3 class="project-card-title">
-                  3D Product Renders & Blender Assets
-                </h3>
-                <p class="project-card-excerpt">
-                  Photorealistic 3D product visualizations, scene lighting,
-                  material texturing, and digital render passes built in
-                  Blender.
-                </p>
-                <a href="projects/product-sample.html" class="btn-link"
-                  >View Project &rarr;</a
-                >
-              </div>
+            <!-- 6. INVOICE GENERATOR -->
+            <article class="project-card reveal-up" data-category="development">
+              <a href="projects/invoice-generator.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>Invoice Generator</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">Node.js</span>
+                    <span class="tag tag-dev">TypeScript</span>
+                    <span class="tag tag-dev">PDF</span>
+                  </div>
+                  <h3>Invoice Generator for Freelancers</h3>
+                  <p>
+                    Client management, line items, automatic totals, PDF preview
+                    and download, payment status tracking. Built for freelance
+                    photographers and creatives.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             ALL WORK (Secondary disciplines)
+             ========================================== -->
+      <section
+        class="section-padding"
+        style="
+          background: var(--bg-raised);
+          border-top: 1px solid var(--border-subtle);
+        "
+        id="all-work"
+      >
+        <div class="container">
+          <span class="section-label reveal-up">all disciplines</span>
+          <h2 class="section-title reveal-up">All Work</h2>
+          <p class="section-subtitle reveal-up" style="margin-bottom: 24px">
+            Filter by discipline to explore projects across development, design,
+            branding and production.
+          </p>
+
+          <div
+            class="filter-bar reveal-up"
+            style="
+              margin-bottom: 40px;
+              display: flex;
+              gap: 8px;
+              flex-wrap: wrap;
+            "
+          >
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="development">
+              Development
+            </button>
+            <button class="filter-btn" data-filter="web-design">
+              Web Design
+            </button>
+            <button class="filter-btn" data-filter="branding">Branding</button>
+            <button class="filter-btn" data-filter="graphic-design">
+              Graphic Design
+            </button>
+            <button class="filter-btn" data-filter="photography">
+              Photography
+            </button>
+            <button class="filter-btn" data-filter="video">Video</button>
+            <button class="filter-btn" data-filter="print">Print</button>
+          </div>
+
+          <div class="projects-grid" id="portfolio-grid">
+            <!-- DEV: CEAR (repeated for filter) -->
+            <article class="project-card reveal-up" data-category="development">
+              <a href="projects/cear.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>SaaS Booking Platform</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">Node.js</span>
+                    <span class="tag tag-dev">TypeScript</span>
+                  </div>
+                  <h3>Cear</h3>
+                  <p>
+                    Multi-tenant SaaS appointment booking platform with atomic
+                    slot-holding and global payment integration.
+                  </p>
+                  <span class="project-status status-progress"
+                    >In Progress</span
+                  >
+                </div>
+              </a>
+            </article>
+
+            <!-- DEV: URL SHORTENER -->
+            <article class="project-card reveal-up" data-category="development">
+              <a href="projects/url-shortener.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>URL Shortener</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">Node.js</span>
+                    <span class="tag tag-dev">Redis</span>
+                  </div>
+                  <h3>URL Shortener with Analytics</h3>
+                  <p>
+                    Link shortening with click tracking, referrer data and rate
+                    limiting.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- DEV: WEBHOOK INSPECTOR -->
+            <article class="project-card reveal-up" data-category="development">
+              <a href="projects/webhook-inspector.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>Webhook Inspector</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">WebSockets</span>
+                    <span class="tag tag-dev">SSE</span>
+                  </div>
+                  <h3>Webhook Inspector</h3>
+                  <p>
+                    Real-time webhook debugging tool with live payload display.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- DEV: UPTIME MONITOR -->
+            <article class="project-card reveal-up" data-category="development">
+              <a href="projects/uptime-monitor.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>Uptime Monitor</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">Cron</span>
+                    <span class="tag tag-dev">Alerts</span>
+                  </div>
+                  <h3>Uptime Monitor & Status Page</h3>
+                  <p>
+                    HTTP health checks with email and Discord alerts and a
+                    public status dashboard.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- DEV: AI TOOL -->
+            <article class="project-card reveal-up" data-category="development">
+              <a href="projects/ai-tool.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>AI Tool</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">Python</span>
+                    <span class="tag tag-dev">OpenAI</span>
+                  </div>
+                  <h3>AI-Powered Writing Tool</h3>
+                  <p>
+                    Focused AI utility with streaming responses and rate
+                    limiting.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- DEV: INVOICE GENERATOR -->
+            <article class="project-card reveal-up" data-category="development">
+              <a href="projects/invoice-generator.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>Invoice Generator</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">TypeScript</span>
+                    <span class="tag tag-dev">PDF</span>
+                  </div>
+                  <h3>Invoice Generator</h3>
+                  <p>
+                    Client management, line items, PDF generation and payment
+                    tracking for freelancers.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- BRANDING: HONVRIA -->
+            <article class="project-card reveal-up" data-category="branding">
+              <a href="projects/brand-identity.html" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-branding">
+                    <span>Brand Identity</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-brand">Branding</span>
+                    <span class="tag tag-brand">Identity</span>
+                  </div>
+                  <h3>Honvria Studio Visual Identity</h3>
+                  <p>
+                    Complete brand identity system covering naming, logo,
+                    colour, typography and applications.
+                  </p>
+                  <span class="project-status status-live">Completed</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- WEB DESIGN: WORDPRESS -->
+            <article class="project-card reveal-up" data-category="web-design">
+              <a href="#" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-design">
+                    <span>Custom WordPress</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-dev">WordPress</span>
+                    <span class="tag tag-dev">PHP</span>
+                  </div>
+                  <h3>Custom WordPress Platform</h3>
+                  <p>
+                    Hand-coded WordPress theme built without page builders or
+                    plugins.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- GRAPHIC DESIGN: BARISTA BATTLE -->
+            <article
+              class="project-card reveal-up"
+              data-category="graphic-design"
+            >
+              <a href="#" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-design">
+                    <span>Campaign Design</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag tag-design">Graphic Design</span>
+                    <span class="tag tag-design">Campaign</span>
+                  </div>
+                  <h3>CoffeeMM Barista Battle</h3>
+                  <p>
+                    Event branding, social media assets, print banners and
+                    promotional artwork.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRINT -->
+            <article class="project-card reveal-up" data-category="print">
+              <a href="#" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-print">
+                    <span>Print Production</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag">Print</span>
+                    <span class="tag">Prepress</span>
+                  </div>
+                  <h3>LimeInc.Tech Prepress</h3>
+                  <p>
+                    Colour separation, die-cut packaging and large format print
+                    management.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PHOTOGRAPHY -->
+            <article class="project-card reveal-up" data-category="photography">
+              <a href="#" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-photo">
+                    <span>Photography</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag">Photography</span>
+                    <span class="tag">Commercial</span>
+                  </div>
+                  <h3>Commercial & Event Photography</h3>
+                  <p>
+                    Product, lifestyle and event photography with clean
+                    composition.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- VIDEO -->
+            <article class="project-card reveal-up" data-category="video">
+              <a href="#" class="project-link">
+                <div class="project-image">
+                  <div class="project-placeholder placeholder-dev">
+                    <span>Video Content</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="tag">Video</span>
+                    <span class="tag">Editing</span>
+                  </div>
+                  <h3>Promotional Video Content</h3>
+                  <p>
+                    Short-form promotional content, event footage and social
+                    media reels.
+                  </p>
+                  <span class="project-status status-soon">Coming Soon</span>
+                </div>
+              </a>
             </article>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Site Footer -->
-    <footer class="site-footer">
-      <div class="container footer-container">
-        <div class="footer-brand">
-          <span class="logo-text">Honvria</span>
-          <span class="logo-subtext">Studio</span>
-          <p>Creative & Multimedia Excellence by Clarence Ruwizhi.</p>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2026 Clarence Ruwizhi. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script src="js/main.js"></script>
+    <script>
+      // Portfolio Filter (All Work section only)
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const projectCards = document.querySelectorAll(
+        "#portfolio-grid .project-card",
+      );
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const filter = btn.getAttribute("data-filter");
+
+          projectCards.forEach((card) => {
+            if (
+              filter === "all" ||
+              card.getAttribute("data-category") === filter
+            ) {
+              card.style.display = "";
+              card.style.opacity = "0";
+              card.style.transform = "translateY(12px)";
+              requestAnimationFrame(() => {
+                card.style.transition =
+                  "opacity 0.3s ease, transform 0.3s ease";
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+              });
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
