@@ -240,26 +240,6 @@
           btn.disabled = true;
           btn.textContent = "Sending...";
 
-          // 1. Prepare WhatsApp URL
-          var waText = encodeURIComponent(
-            "New message from portfolio:\n\n" +
-              "Name: " +
-              name +
-              "\n" +
-              "Email: " +
-              email +
-              "\n" +
-              "Subject: " +
-              (subject || "General Inquiry") +
-              "\n\n" +
-              message,
-          );
-          var waUrl = "https://wa.me/27813877681?text=" + waText;
-
-          // 2. Open blank tab immediately (prevents browser popup blocker)
-          var waWindow = window.open("about:blank", "_blank");
-
-          // 3. Send email via FormSubmit AJAX (JSON format)
           fetch("https://formsubmit.co/ajax/emryslion@proton.me", {
             method: "POST",
             headers: {
@@ -269,45 +249,39 @@
             body: JSON.stringify({
               name: name,
               email: email,
+              _replyto: email,
               _subject: subject
-                ? "Portfolio Contact: " + subject
-                : "New Portfolio Contact Message",
+                ? "Portfolio: " + subject
+                : "New Portfolio Contact",
               message: message,
+              _template: "table",
+              _captcha: "false",
             }),
           })
             .then(function (response) {
-              if (!response.ok) {
-                throw new Error("Server responded with " + response.status);
-              }
-              return response.json();
+              return response.json().then(function (data) {
+                return { ok: response.ok, data: data };
+              });
             })
-            .then(function (data) {
-              // Redirect pre-opened tab to WhatsApp
-              if (waWindow) {
-                waWindow.location.href = waUrl;
+            .then(function (result) {
+              if (result.ok && result.data.success !== "false") {
+                if (grid) grid.style.display = "none";
+                if (status) status.classList.add("visible");
+
+                setTimeout(function () {
+                  window.location.href = "index.html";
+                }, 4000);
+              } else {
+                throw new Error(result.data.message || "Send failed");
               }
-
-              // Show success state on page
-              if (grid) grid.style.display = "none";
-              if (status) status.classList.add("visible");
-
-              // Redirect to homepage after 4 seconds
-              setTimeout(function () {
-                window.location.href = "index.html";
-              }, 4000);
             })
             .catch(function (error) {
               console.error("Send error:", error);
-
-              // If fetch failed, still send to WhatsApp so message isn't lost
-              if (waWindow) {
-                waWindow.location.href = waUrl;
-              }
-
               alert(
-                "Notice: If this is your first test, check emryslion@proton.me for FormSubmit activation email.\n\nWhatsApp is opening now with your message pre-filled.",
+                "Message could not be sent yet.\n\n" +
+                  'If this is your first test, check emryslion@proton.me (and Spam) for an email from FormSubmit titled "Activate your form". Click Activate once.\n\n' +
+                  "Then try again.",
               );
-
               btn.disabled = false;
               btn.textContent = "Send Message";
             });
