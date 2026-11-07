@@ -63,8 +63,10 @@
   function initMobileMenu() {
     const menuToggle = document.getElementById("mobile-menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
-
     if (!menuToggle || !mobileMenu) return;
+
+    // Move menu to body so it escapes header stacking context
+    document.body.appendChild(mobileMenu);
 
     menuToggle.addEventListener("click", () => {
       const isOpen = mobileMenu.classList.toggle("is-open");
