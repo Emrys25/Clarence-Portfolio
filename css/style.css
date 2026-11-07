@@ -174,35 +174,47 @@ button {
   line-height: 1.7;
 }
 
-/* 6. HEADER */
+/* ============================================
+   7. HEADER & NAVIGATION
+   ============================================ */
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 1000;
-  background: rgba(30, 30, 30, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  width: 100%;
+  z-index: 9999;
+  background: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-subtle);
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: var(--container-width);
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
-  height: 56px;
+  padding: 1rem 1.5rem;
+  position: relative;
+  z-index: 10001;
 }
 
 .nav-logo {
-  font-family: var(--font-mono);
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
   color: var(--text-heading);
-  letter-spacing: -0.3px;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  transition: opacity 0.2s ease;
+}
+
+.nav-logo:hover {
+  opacity: 0.85;
 }
 
 .nav-logo .dot {
@@ -212,15 +224,21 @@ button {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 400;
   color: var(--text-secondary);
-  transition: color var(--ease-fast);
+  text-decoration: none;
+  transition: color 0.2s ease;
   position: relative;
+  padding: 0.25rem 0;
 }
 
 .nav-link:hover,
@@ -231,17 +249,45 @@ button {
 .nav-link.active::after {
   content: "";
   position: absolute;
-  bottom: -4px;
+  bottom: -2px;
   left: 0;
-  right: 0;
-  height: 1px;
-  background: var(--accent-purple);
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-purple);
+  border-radius: 1px;
 }
 
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 1rem;
+}
+
+.btn-nav-cv {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent-purple);
+  border: 1px solid var(--accent-purple);
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-nav-cv:hover {
+  background: var(--accent-purple-dim);
+  color: var(--text-heading);
+}
+
+@media (max-width: 768px) {
+  .nav-links,
+  .btn-nav-cv {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: flex;
+  }
 }
 
 /* 7. BUTTONS */
@@ -307,7 +353,7 @@ button {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 10002;
   padding: 0;
   position: relative;
 }
@@ -321,7 +367,6 @@ button {
   transform-origin: center;
 }
 
-/* Hamburger to X */
 .mobile-menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
   background-color: var(--accent-purple);
@@ -345,7 +390,7 @@ button {
   height: 100vh;
   height: 100dvh;
   background: #0a0a0a;
-  z-index: 999;
+  z-index: 10000;
   display: flex;
   align-items: center;
   justify-content: center;
