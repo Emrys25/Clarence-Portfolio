@@ -240,31 +240,30 @@
           btn.disabled = true;
           btn.textContent = "Sending...";
 
-          fetch("https://formsubmit.co/ajax/emryslion@proton.me", {
+          // Replace the string below with your actual key from the email
+          const ACCESS_KEY = "cce02e6f-cdfc-445a-99ee-b0b3dbb693bd";
+
+          fetch("https://api.web3forms.com/submit", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
               Accept: "application/json",
             },
             body: JSON.stringify({
+              access_key: ACCESS_KEY,
               name: name,
               email: email,
-              _replyto: email,
-              _subject: subject
+              subject: subject
                 ? "Portfolio: " + subject
                 : "New Portfolio Contact",
               message: message,
-              _template: "table",
-              _captcha: "false",
+              from_name: "Clarence Portfolio",
             }),
           })
-            .then(function (response) {
-              return response.json().then(function (data) {
-                return { ok: response.ok, data: data };
-              });
-            })
-            .then(function (result) {
-              if (result.ok && result.data.success !== "false") {
+            .then(async (response) => {
+              let json = await response.json();
+              if (response.status == 200) {
+                // Success
                 if (grid) grid.style.display = "none";
                 if (status) status.classList.add("visible");
 
@@ -272,15 +271,17 @@
                   window.location.href = "index.html";
                 }, 4000);
               } else {
-                throw new Error(result.data.message || "Send failed");
+                // Error
+                console.log(response);
+                alert(json.message);
+                btn.disabled = false;
+                btn.textContent = "Send Message";
               }
             })
-            .catch(function (error) {
-              console.error("Send error:", error);
+            .catch((error) => {
+              console.log(error);
               alert(
-                "Message could not be sent yet.\n\n" +
-                  'If this is your first test, check emryslion@proton.me (and Spam) for an email from FormSubmit titled "Activate your form". Click Activate once.\n\n' +
-                  "Then try again.",
+                "Something went wrong. Please try again or email me directly.",
               );
               btn.disabled = false;
               btn.textContent = "Send Message";
