@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cear - Multi-Tenant SaaS Booking Platform | Clarence.R</title>
+    <meta
+      name="description"
+      content="Technical case study for Cear, a high-performance multi-tenant SaaS booking platform built with Node.js, TypeScript, and Paystack integration."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Main JavaScript -->
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body data-page="work">
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Animated Background Layer -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-noise" aria-hidden="true">
+      <svg width="100%" height="100%">
+        <filter id="noiseFilter">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.65"
+            numOctaves="3"
+            stitchTiles="stitch"
+          />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+      </svg>
+    </div>
+    <div class="bg-floaters" aria-hidden="true">
+      <span class="floater f1">const</span>
+      <span class="floater f2">async</span>
+      <span class="floater f3">&lt;/&gt;</span>
+      <span class="floater f4">{ }</span>
+      <span class="floater f5">=&gt;</span>
+      <span class="floater f6">200 OK</span>
+      <span class="floater f7">paystack</span>
+      <span class="floater f8">tenant_id</span>
+      <span class="floater f9">true</span>
+      <span class="floater f10">db.connect()</span>
+    </div>
+
+    <!-- Component Placeholder: Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content Area -->
+    <main id="main-content" class="main-content">
+      <!-- Project Header Section -->
+      <section class="section project-hero">
+        <div class="container">
+          <div class="back-link-wrap">
+            <a href="../work.html" class="nav-link">&larr; Back to all work</a>
+          </div>
+
+          <div class="project-header">
+            <div class="project-status-pill in-progress">
+              <span class="status-dot pulsing"></span>
+              In Progress (Active Development)
+            </div>
+            <h1 class="project-title">Cear</h1>
+            <p class="project-lead">
+              Multi-Tenant SaaS Booking &amp; Scheduling Engine designed for
+              scale, multi-currency transactions, and seamless integration into
+              localized payment ecosystems.
+            </p>
+          </div>
+
+          <div class="project-meta-grid">
+            <div class="meta-item">
+              <span class="meta-label">Role</span>
+              <span class="meta-value">Founder &amp; Lead Architect</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Primary Stack</span>
+              <span class="meta-value"
+                >Node.js, TypeScript, Next.js, Paystack</span
+              >
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Target Audience</span>
+              <span class="meta-value"
+                >Service Businesses, Agencies, Venues</span
+              >
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Status</span>
+              <span class="meta-value">MVP Development</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Detailed Content Section -->
+      <section class="section project-details">
+        <div class="container">
+          <div class="case-study-grid">
+            <!-- Left Column: Primary Narrative -->
+            <div class="case-study-main">
+              <article class="case-section">
+                <h2 class="case-heading">Project Overview</h2>
+                <p>
+                  Cear is built to solve a specific pain point in localized
+                  booking workflows: existing off-the-shelf SaaS solutions often
+                  enforce rigid payment gateways with high regional fees and
+                  offer weak support for dynamic multi-tenant isolation.
+                </p>
+                <p>
+                  The goal of Cear is to provide service businesses with a
+                  zero-friction, lightning-fast booking engine that allows
+                  individual tenant custom branding, automated calendar
+                  synchronization, and native integration with localized payment
+                  providers like Paystack.
+                </p>
+              </article>
+
+              <article class="case-section">
+                <h2 class="case-heading">
+                  System Architecture &amp; Technical Decisions
+                </h2>
+                <p>
+                  The platform is architected around strict tenant data
+                  isolation, sub-second API response rates, and robust webhooks
+                  for asynchronous payment fulfillment.
+                </p>
+
+                <div class="architecture-box">
+                  <h3 class="box-title">Core Architecture Highlights</h3>
+                  <ul class="tech-list">
+                    <li>
+                      <strong>Multi-Tenancy Layer:</strong> Domain and dynamic
+                      path-based routing, isolating client data via tenant
+                      identifiers embedded in token payloads and database query
+                      scopes.
+                    </li>
+                    <li>
+                      <strong>Payment Processing:</strong> Native integration
+                      with Paystack API for localized split payments, automated
+                      webhooks validation, and transaction reconciliation.
+                    </li>
+                    <li>
+                      <strong>State &amp; Reservation Lock:</strong> Concurrency
+                      management preventing double-booking during active
+                      checkout sessions using short-lived database locks.
+                    </li>
+                    <li>
+                      <strong>Type Safety:</strong> Full end-to-end type safety
+                      with TypeScript, sharing schema definitions between server
+                      endpoints and front-end forms.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="case-section">
+                <h2 class="case-heading">Key Features Under Construction</h2>
+                <div class="features-grid">
+                  <div class="feature-card">
+                    <h4>Dynamic Availability Engine</h4>
+                    <p>
+                      Configurable working hours, buffer times between
+                      appointments, and break management computed dynamically on
+                      UTC timestamps.
+                    </p>
+                  </div>
+                  <div class="feature-card">
+                    <h4>Localized Payment Gateway</h4>
+                    <p>
+                      First-class integration with Paystack to support mobile
+                      money, card payments, and instant EFT seamlessly.
+                    </p>
+                  </div>
+                  <div class="feature-card">
+                    <h4>Tenant White-Labeling</h4>
+                    <p>
+                      Custom subdomains, brand color overrides, custom
+                      communication templates, and dedicated booking portals.
+                    </p>
+                  </div>
+                  <div class="feature-card">
+                    <h4>Automated Notifications</h4>
+                    <p>
+                      Webhook-triggered email and SMS appointment confirmations
+                      and automated reminder queues.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-section">
+                <h2 class="case-heading">
+                  Code Preview: Webhook Verification Pattern
+                </h2>
+                <p>
+                  A core requirement of payment integrations is robust
+                  cryptographic signature validation before fulfilling
+                  transactions. Below is a representation of the webhook handler
+                  logic:
+                </p>
+
+                <div class="code-block">
+                  <div class="code-header">
+                    <span class="code-lang">TypeScript</span>
+                    <span class="code-file"
+                      >src/webhooks/paystack.handler.ts</span
+                    >
+                  </div>
+                  <pre><code><span class="token-keyword">import</span> { createHmac } <span class="token-keyword">from</span> <span class="token-string">'crypto'</span>;
+<span class="token-keyword">import</span> { Request, Response } <span class="token-keyword">from</span> <span class="token-string">'express'</span>;
+
+<span class="token-keyword">export const</span> verifyPaystackSignature = (req: Request, res: Response) => {
+  <span class="token-keyword">const</span> secret = process.env.PAYSTACK_SECRET_KEY!;
+  <span class="token-keyword">const</span> hash = createHmac(<span class="token-string">'sha512'</span>, secret)
+    .update(JSON.stringify(req.body))
+    .digest(<span class="token-string">'hex'</span>);
+
+  <span class="token-keyword">if</span> (hash !== req.headers[<span class="token-string">'x-paystack-signature'</span>]) {
+    <span class="token-keyword">return</span> res.status(<span class="token-number">401</span>).json({ status: <span class="token-string">'unauthorized'</span> });
+  }
+
+  <span class="token-keyword">const</span> { event, data } = req.body;
+  <span class="token-keyword">if</span> (event === <span class="token-string">'charge.success'</span>) {
+    <span class="token-comment">// Process tenant booking fulfillment asynchronously</span>
+    <span class="token-keyword">await</span> fulfillReservation(data.reference);
+  }
+
+  <span class="token-keyword">return</span> res.status(<span class="token-number">200</span>).send({ status: <span class="token-string">'success'</span> });
+};</code></pre>
+                </div>
+              </article>
+            </div>
+
+            <!-- Right Column: Sidebar Meta & Quick Links -->
+            <aside class="case-study-sidebar">
+              <div class="sidebar-card">
+                <h3 class="sidebar-heading">Project Specs</h3>
+                <dl class="specs-list">
+                  <dt>Language</dt>
+                  <dd>TypeScript / JavaScript</dd>
+
+                  <dt>Backend Framework</dt>
+                  <dd>Node.js / REST API</dd>
+
+                  <dt>Frontend Framework</dt>
+                  <dd>Next.js / Tailwind CSS</dd>
+
+                  <dt>Payments</dt>
+                  <dd>Paystack Integration</dd>
+
+                  <dt>Data Architecture</dt>
+                  <dd>Multi-Tenant Schema</dd>
+
+                  <dt>Repository</dt>
+                  <dd>Private (Active Dev)</dd>
+                </dl>
+              </div>
+
+              <div class="sidebar-card callout-card">
+                <h3 class="sidebar-heading">Interested in this project?</h3>
+                <p>
+                  Cear is currently in active development. If you are interested
+                  in technical details, system architecture, or early access,
+                  get in touch.
+                </p>
+                <a href="../contact.html" class="btn btn-primary btn-full"
+                  >Get in Touch</a
+                >
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <section class="section project-nav">
+        <div class="container">
+          <div class="nav-between">
+            <a href="../work.html" class="nav-link"
+              >&larr; Return to Portfolio</a
+            >
+            <a href="brand-identity.html" class="nav-link"
+              >Next Project: Brand Identity &rarr;</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Component Placeholder: Footer -->
+    <div id="footer-placeholder"></div>
+  </body>
+</html>
