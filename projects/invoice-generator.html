@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base-path" content="../" />
+    <title>Invoice Generator Engine - Document Utility | Clarence.R</title>
+    <meta
+      name="description"
+      content="Technical case study concept for a fast document generation utility built with Node.js, TypeScript, HTML template engines, and PDF compilation tools."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Main JavaScript -->
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body data-page="work">
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Animated Background Layer -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-noise" aria-hidden="true">
+      <svg width="100%" height="100%">
+        <filter id="noiseFilter">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.65"
+            numOctaves="3"
+            stitchTiles="stitch"
+          />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+      </svg>
+    </div>
+    <div class="bg-floaters" aria-hidden="true">
+      <span class="floater f1">pdfkit</span>
+      <span class="floater f2">template.compile()</span>
+      <span class="floater f3">&lt;/&gt;</span>
+      <span class="floater f4">calculateVat()</span>
+      <span class="floater f5">blob.stream()</span>
+      <span class="floater f6">A4 Page</span>
+      <span class="floater f7">typescript</span>
+      <span class="floater f8">currency: ZAR</span>
+      <span class="floater f9">true</span>
+      <span class="floater f10">puppeteer</span>
+    </div>
+
+    <!-- Component Placeholder: Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content Area -->
+    <main id="main-content" class="main-content">
+      <!-- Project Header Section -->
+      <section class="section project-hero">
+        <div class="container">
+          <div class="back-link-wrap">
+            <a href="../work.html" class="nav-link">&larr; Back to all work</a>
+          </div>
+
+          <div class="project-header">
+            <div class="project-status-pill">
+              <span class="status-dot"></span>
+              Coming Soon (Architecture Concept)
+            </div>
+            <h1 class="project-title">Invoice Generator Engine</h1>
+            <p class="project-lead">
+              Lightweight document compilation utility that accepts structured
+              JSON order data, calculates itemized totals and regional VAT
+              taxes, and renders pixel-perfect PDF invoices in milliseconds.
+            </p>
+          </div>
+
+          <div class="project-meta-grid">
+            <div class="meta-item">
+              <span class="meta-label">Role</span>
+              <span class="meta-value">Sole Developer</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Target Stack</span>
+              <span class="meta-value"
+                >Node.js, TypeScript, PDFKit, Handlebars</span
+              >
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Output Format</span>
+              <span class="meta-value">Standard A4 / Vector PDF</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Status</span>
+              <span class="meta-value">Planned / Concept</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Detailed Content Section -->
+      <section class="section project-details">
+        <div class="container">
+          <div class="case-study-grid">
+            <!-- Left Column: Primary Narrative -->
+            <div class="case-study-main">
+              <article class="case-section">
+                <h2 class="case-heading">System Concept</h2>
+                <p>
+                  Freelancers and small businesses frequently require clean,
+                  automated invoice generation without manual design or
+                  high-cost accounting software integrations.
+                </p>
+                <p>
+                  The Invoice &amp; Estimate Generator Engine combines HTML/CSS
+                  template compilation with streaming PDF rendering engines to
+                  produce lightweight, print-ready documents that can be
+                  downloaded locally or dispatched automatically via email
+                  attachment queues.
+                </p>
+              </article>
+
+              <article class="case-section">
+                <h2 class="case-heading">Target System Architecture</h2>
+
+                <div class="architecture-box">
+                  <h3 class="box-title">Key Architectural Features</h3>
+                  <ul class="tech-list">
+                    <li>
+                      <strong>Schema Validation:</strong> Strict TypeScript
+                      interfaces validating currency, client metadata, line item
+                      quantities, and discount rates before compilation.
+                    </li>
+                    <li>
+                      <strong>Tax &amp; Currency Calculator:</strong> Precision
+                      decimal arithmetic computing subtotal, localized VAT/tax
+                      percentage rates, and grand totals without floating point
+                      errors.
+                    </li>
+                    <li>
+                      <strong>Dynamic Template Engine:</strong> Custom brand
+                      styling over Handlebars HTML templates compiled straight
+                      to high-resolution vector PDF streams.
+                    </li>
+                    <li>
+                      <strong>Client &amp; Server Modes:</strong> Runs
+                      server-side in Node.js pipelines or client-side via Web
+                      API Blob rendering.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="case-section">
+                <h2 class="case-heading">
+                  Code Concept: Precision Calculation Logic
+                </h2>
+                <p>
+                  Below is the core calculation model designed to compute line
+                  item subtotals, VAT rates, and grand total structures
+                  accurately:
+                </p>
+
+                <div class="code-block">
+                  <div class="code-header">
+                    <span class="code-lang">TypeScript</span>
+                    <span class="code-file"
+                      >src/services/invoice.calculator.ts</span
+                    >
+                  </div>
+                  <pre><code><span class="token-keyword">export interface</span> LineItem {
+  description: string;
+  quantity: number;
+  unitPrice: number;
+}
+
+<span class="token-keyword">export interface</span> InvoiceTotals {
+  subtotal: number;
+  taxAmount: number;
+  grandTotal: number;
+}
+
+<span class="token-keyword">export function</span> calculateInvoiceTotals(
+  items: LineItem[], 
+  taxRatePercent: number = <span class="token-number">15</span>
+): InvoiceTotals {
+  <span class="token-keyword">const</span> subtotal = items.reduce((acc, item) => {
+    <span class="token-keyword">return</span> acc + (item.quantity * item.unitPrice);
+  }, <span class="token-number">0</span>);
+
+  <span class="token-keyword">const</span> taxAmount = Math.round((subtotal * (taxRatePercent / <span class="token-number">100</span>)) * <span class="token-number">100</span>) / <span class="token-number">100</span>;
+  <span class="token-keyword">const</span> grandTotal = subtotal + taxAmount;
+
+  <span class="token-keyword">return</span> {
+    subtotal: Math.round(subtotal * <span class="token-number">100</span>) / <span class="token-number">100</span>,
+    taxAmount,
+    grandTotal: Math.round(grandTotal * <span class="token-number">100</span>) / <span class="token-number">100</span>
+  };
+}</code></pre>
+                </div>
+              </article>
+            </div>
+
+            <!-- Right Column: Sidebar Meta & Quick Links -->
+            <aside class="case-study-sidebar">
+              <div class="sidebar-card">
+                <h3 class="sidebar-heading">Project Specs</h3>
+                <dl class="specs-list">
+                  <dt>Language</dt>
+                  <dd>TypeScript / Node.js</dd>
+
+                  <dt>Rendering Engine</dt>
+                  <dd>PDFKit / html2pdf</dd>
+
+                  <dt>Templates</dt>
+                  <dd>Handlebars / CSS</dd>
+
+                  <dt>Precision</dt>
+                  <dd>2-Decimal Tax Math</dd>
+
+                  <dt>Repository</dt>
+                  <dd>Planned Public Repo</dd>
+                </dl>
+              </div>
+
+              <div class="sidebar-card callout-card">
+                <h3 class="sidebar-heading">Need document tools?</h3>
+                <p>
+                  Interested in custom document pipelines, PDF generation, or
+                  invoicing utilities? Reach out to discuss specifications.
+                </p>
+                <a href="../contact.html" class="btn btn-primary btn-full"
+                  >Contact Clarence</a
+                >
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <section class="section project-nav">
+        <div class="container">
+          <div class="nav-between">
+            <a href="ai-tool.html" class="nav-link"
+              >&larr; Previous: AI Tool Integrator</a
+            >
+            <a href="../work.html" class="nav-link"
+              >Return to All Work &rarr;</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Component Placeholder: Footer -->
+    <div id="footer-placeholder"></div>
+  </body>
+</html>

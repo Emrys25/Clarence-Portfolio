@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base-path" content="../" />
+    <title>
+      URL Shortener Service - High-Performance Redirect Engine | Clarence.R
+    </title>
+    <meta
+      name="description"
+      content="Technical case study concept for a high-performance URL shortener built with Node.js, Redis, PostgreSQL, and Base62 encoding."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Main JavaScript -->
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body data-page="work">
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Animated Background Layer -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-noise" aria-hidden="true">
+      <svg width="100%" height="100%">
+        <filter id="noiseFilter">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.65"
+            numOctaves="3"
+            stitchTiles="stitch"
+          />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+      </svg>
+    </div>
+    <div class="bg-floaters" aria-hidden="true">
+      <span class="floater f1">redis</span>
+      <span class="floater f2">base62</span>
+      <span class="floater f3">&lt;/&gt;</span>
+      <span class="floater f4">301 Redirect</span>
+      <span class="floater f5">GET /:code</span>
+      <span class="floater f6">POST /shorten</span>
+      <span class="floater f7">postgres</span>
+      <span class="floater f8">cache-hit</span>
+      <span class="floater f9">true</span>
+      <span class="floater f10">node.js</span>
+    </div>
+
+    <!-- Component Placeholder: Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content Area -->
+    <main id="main-content" class="main-content">
+      <!-- Project Header Section -->
+      <section class="section project-hero">
+        <div class="container">
+          <div class="back-link-wrap">
+            <a href="../work.html" class="nav-link">&larr; Back to all work</a>
+          </div>
+
+          <div class="project-header">
+            <div class="project-status-pill">
+              <span class="status-dot"></span>
+              Coming Soon (Architecture Concept)
+            </div>
+            <h1 class="project-title">URL Shortener Service</h1>
+            <p class="project-lead">
+              High-throughput redirection engine designed for sub-10ms latency
+              using Node.js, Redis caching, Base62 hash generation, and
+              PostgreSQL for long-term analytics storage.
+            </p>
+          </div>
+
+          <div class="project-meta-grid">
+            <div class="meta-item">
+              <span class="meta-label">Role</span>
+              <span class="meta-value">Sole Developer</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Target Stack</span>
+              <span class="meta-value"
+                >Node.js, Express, Redis, PostgreSQL</span
+              >
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Primary Metric</span>
+              <span class="meta-value">Sub-10ms Latency Redirects</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Status</span>
+              <span class="meta-value">Planned / Concept</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Detailed Content Section -->
+      <section class="section project-details">
+        <div class="container">
+          <div class="case-study-grid">
+            <!-- Left Column: Primary Narrative -->
+            <div class="case-study-main">
+              <article class="case-section">
+                <h2 class="case-heading">System Concept</h2>
+                <p>
+                  The URL Shortener Service is structured around a classic
+                  read-heavy architecture. Since short links are created once
+                  and read millions of times, the system prioritizes aggressive
+                  caching at the edge and memory layer before querying
+                  persistent storage.
+                </p>
+                <p>
+                  Each long URL is converted into a 6-character Base62 string
+                  derived from an auto-incrementing unique sequence ID, yielding
+                  over 56 billion possible unique short combinations without
+                  collision risk.
+                </p>
+              </article>
+
+              <article class="case-section">
+                <h2 class="case-heading">Target System Flow</h2>
+
+                <div class="architecture-box">
+                  <h3 class="box-title">Key Architectural Pillars</h3>
+                  <ul class="tech-list">
+                    <li>
+                      <strong>Base62 Encoding:</strong> Replaces
+                      non-deterministic hashing with deterministic Base62
+                      encoding over a distributed counter for collision-free
+                      short key generation.
+                    </li>
+                    <li>
+                      <strong>Redis Caching Layer:</strong> Memory cache stores
+                      active keys with TTLs to serve 301/302 redirects directly
+                      from RAM without touching the database.
+                    </li>
+                    <li>
+                      <strong>Asynchronous Analytics:</strong> Click metadata
+                      (referrer, country, timestamp) offloaded to an event queue
+                      to prevent blocking the HTTP response cycle.
+                    </li>
+                    <li>
+                      <strong>PostgreSQL Storage:</strong> Relational schema for
+                      storing tenant accounts, original URLs, expiration
+                      policies, and aggregated daily analytics.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="case-section">
+                <h2 class="case-heading">Code Concept: Base62 Encoder</h2>
+                <p>
+                  Below is the core encoding utility planned for converting
+                  numeric database IDs into compact short codes:
+                </p>
+
+                <div class="code-block">
+                  <div class="code-header">
+                    <span class="code-lang">TypeScript</span>
+                    <span class="code-file">src/utils/base62.ts</span>
+                  </div>
+                  <pre><code><span class="token-keyword">const</span> ALPHABET = <span class="token-string">'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'</span>;
+<span class="token-keyword">const</span> BASE = ALPHABET.length;
+
+<span class="token-keyword">export function</span> encodeBase62(num: number): string {
+  <span class="token-keyword">if</span> (num === <span class="token-number">0</span>) <span class="token-keyword">return</span> ALPHABET[<span class="token-number">0</span>];
+  
+  <span class="token-keyword">let</span> encoded = <span class="token-string">''</span>;
+  <span class="token-keyword">while</span> (num > <span class="token-number">0</span>) {
+    <span class="token-keyword">const</span> remainder = num % BASE;
+    encoded = ALPHABET[remainder] + encoded;
+    num = Math.floor(num / BASE);
+  }
+  
+  <span class="token-keyword">return</span> encoded;
+}</code></pre>
+                </div>
+              </article>
+            </div>
+
+            <!-- Right Column: Sidebar Meta & Quick Links -->
+            <aside class="case-study-sidebar">
+              <div class="sidebar-card">
+                <h3 class="sidebar-heading">Project Specs</h3>
+                <dl class="specs-list">
+                  <dt>Language</dt>
+                  <dd>TypeScript / Node.js</dd>
+
+                  <dt>Cache Store</dt>
+                  <dd>Redis Memory Store</dd>
+
+                  <dt>Database</dt>
+                  <dd>PostgreSQL</dd>
+
+                  <dt>Key Strategy</dt>
+                  <dd>Base62 Encoding</dd>
+
+                  <dt>Repository</dt>
+                  <dd>Planned Public Repo</dd>
+                </dl>
+              </div>
+
+              <div class="sidebar-card callout-card">
+                <h3 class="sidebar-heading">Want to collaborate?</h3>
+                <p>
+                  This project is part of my planned dev roadmap. If you are
+                  interested in backend systems and high-throughput
+                  architectures, reach out.
+                </p>
+                <a href="../contact.html" class="btn btn-primary btn-full"
+                  >Contact Clarence</a
+                >
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <section class="section project-nav">
+        <div class="container">
+          <div class="nav-between">
+            <a href="cear.html" class="nav-link">&larr; Previous: Cear</a>
+            <a href="../work.html" class="nav-link"
+              >Return to All Work &rarr;</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Component Placeholder: Footer -->
+    <div id="footer-placeholder"></div>
+  </body>
+</html>

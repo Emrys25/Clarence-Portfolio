@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base-path" content="../" />
+    <title>Webhook Inspector - Real-Time HTTP Debugger | Clarence.R</title>
+    <meta
+      name="description"
+      content="Technical case study concept for a real-time webhook inspector built with Node.js, Express, WebSockets, and Server-Sent Events."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Main JavaScript -->
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body data-page="work">
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Animated Background Layer -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-noise" aria-hidden="true">
+      <svg width="100%" height="100%">
+        <filter id="noiseFilter">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.65"
+            numOctaves="3"
+            stitchTiles="stitch"
+          />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+      </svg>
+    </div>
+    <div class="bg-floaters" aria-hidden="true">
+      <span class="floater f1">eventsource</span>
+      <span class="floater f2">POST /webhook</span>
+      <span class="floater f3">&lt;/&gt;</span>
+      <span class="floater f4">200 OK</span>
+      <span class="floater f5">express.raw()</span>
+      <span class="floater f6">x-signature</span>
+      <span class="floater f7">sse</span>
+      <span class="floater f8">ws://</span>
+      <span class="floater f9">true</span>
+      <span class="floater f10">req.headers</span>
+    </div>
+
+    <!-- Component Placeholder: Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content Area -->
+    <main id="main-content" class="main-content">
+      <!-- Project Header Section -->
+      <section class="section project-hero">
+        <div class="container">
+          <div class="back-link-wrap">
+            <a href="../work.html" class="nav-link">&larr; Back to all work</a>
+          </div>
+
+          <div class="project-header">
+            <div class="project-status-pill">
+              <span class="status-dot"></span>
+              Coming Soon (Architecture Concept)
+            </div>
+            <h1 class="project-title">Webhook Inspector &amp; Debugger</h1>
+            <p class="project-lead">
+              Developer utility for capturing, inspecting, validating
+              cryptographic signatures, and replaying inbound HTTP webhooks in
+              real time via Server-Sent Events (SSE).
+            </p>
+          </div>
+
+          <div class="project-meta-grid">
+            <div class="meta-item">
+              <span class="meta-label">Role</span>
+              <span class="meta-value">Sole Developer</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Target Stack</span>
+              <span class="meta-value">Node.js, Express, SSE, WebSockets</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Core Tech</span>
+              <span class="meta-value">Real-Time Event Streaming</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Status</span>
+              <span class="meta-value">Planned / Concept</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Detailed Content Section -->
+      <section class="section project-details">
+        <div class="container">
+          <div class="case-study-grid">
+            <!-- Left Column: Primary Narrative -->
+            <div class="case-study-main">
+              <article class="case-section">
+                <h2 class="case-heading">System Concept</h2>
+                <p>
+                  Developing third-party integrations (Paystack, Stripe, GitHub,
+                  Shopify) locally can be tedious without dedicated tools to
+                  inspect incoming raw request bodies and headers.
+                </p>
+                <p>
+                  Webhook Inspector generates temporary unique endpoint URLs
+                  that stream incoming HTTP payloads directly to a connected
+                  browser dashboard in real time without requiring page
+                  refreshes.
+                </p>
+              </article>
+
+              <article class="case-section">
+                <h2 class="case-heading">Target System Architecture</h2>
+
+                <div class="architecture-box">
+                  <h3 class="box-title">Key Technical Capabilities</h3>
+                  <ul class="tech-list">
+                    <li>
+                      <strong>Raw Body Preservation:</strong> Preserves exact
+                      byte streams before JSON parsing to allow accurate
+                      cryptographic HMAC signature verification.
+                    </li>
+                    <li>
+                      <strong>Server-Sent Events (SSE):</strong> Lightweight,
+                      unidirectional streaming channel pushing incoming payloads
+                      to front-end clients instantly.
+                    </li>
+                    <li>
+                      <strong>Payload Replay Engine:</strong> Ability to re-send
+                      captured HTTP requests to local localhost development
+                      servers with identical headers.
+                    </li>
+                    <li>
+                      <strong>Ephemeral Sessions:</strong> Auto-expiring bucket
+                      URLs backed by TTL keys in memory to minimize storage
+                      waste.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="case-section">
+                <h2 class="case-heading">
+                  Code Concept: SSE Stream Broadcasting
+                </h2>
+                <p>
+                  Below is an Express endpoint pattern for accepting webhooks
+                  and broadcasting payload events to open SSE client
+                  connections:
+                </p>
+
+                <div class="code-block">
+                  <div class="code-header">
+                    <span class="code-lang">TypeScript</span>
+                    <span class="code-file">src/routes/webhook.stream.ts</span>
+                  </div>
+                  <pre><code><span class="token-keyword">import</span> { Request, Response } <span class="token-keyword">from</span> <span class="token-string">'express'</span>;
+
+<span class="token-keyword">const</span> clients = <span class="token-keyword">new</span> Set&lt;Response&gt;();
+
+<span class="token-comment">// SSE Client Connection Endpoint</span>
+<span class="token-keyword">export const</span> handleSSEConnect = (req: Request, res: Response) => {
+  res.setHeader(<span class="token-string">'Content-Type'</span>, <span class="token-string">'text/event-stream'</span>);
+  res.setHeader(<span class="token-string">'Cache-Control'</span>, <span class="token-string">'no-cache'</span>);
+  res.setHeader(<span class="token-string">'Connection'</span>, <span class="token-string">'keep-alive'</span>);
+
+  clients.add(res);
+  req.on(<span class="token-string">'close'</span>, () => clients.delete(res));
+};
+
+<span class="token-comment">// Inbound Webhook Listener</span>
+<span class="token-keyword">export const</span> handleInboundWebhook = (req: Request, res: Response) => {
+  <span class="token-keyword">const</span> payload = {
+    timestamp: <span class="token-keyword">new</span> Date().toISOString(),
+    headers: req.headers,
+    body: req.body
+  };
+
+  <span class="token-keyword">for</span> (<span class="token-keyword">const</span> client <span class="token-keyword">of</span> clients) {
+    client.write(<span class="token-string">`data: ${JSON.stringify(payload)}\n\n`</span>);
+  }
+
+  res.status(<span class="token-number">200</span>).json({ status: <span class="token-string">'received'</span> });
+};</code></pre>
+                </div>
+              </article>
+            </div>
+
+            <!-- Right Column: Sidebar Meta & Quick Links -->
+            <aside class="case-study-sidebar">
+              <div class="sidebar-card">
+                <h3 class="sidebar-heading">Project Specs</h3>
+                <dl class="specs-list">
+                  <dt>Language</dt>
+                  <dd>TypeScript / Node.js</dd>
+
+                  <dt>Streaming Tech</dt>
+                  <dd>Server-Sent Events (SSE)</dd>
+
+                  <dt>HTTP Protocol</dt>
+                  <dd>REST &amp; WebSockets</dd>
+
+                  <dt>Parsing</dt>
+                  <dd>Raw Body Middleware</dd>
+
+                  <dt>Repository</dt>
+                  <dd>Planned Public Repo</dd>
+                </dl>
+              </div>
+
+              <div class="sidebar-card callout-card">
+                <h3 class="sidebar-heading">
+                  Interested in real-time dev tools?
+                </h3>
+                <p>
+                  This project focuses on developer tooling and real-time
+                  backend communication. Reach out if you'd like to discuss
+                  system designs.
+                </p>
+                <a href="../contact.html" class="btn btn-primary btn-full"
+                  >Contact Clarence</a
+                >
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <section class="section project-nav">
+        <div class="container">
+          <div class="nav-between">
+            <a href="url-shortener.html" class="nav-link"
+              >&larr; Previous: URL Shortener</a
+            >
+            <a href="uptime-monitor.html" class="nav-link"
+              >Next: Uptime Monitor &rarr;</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Component Placeholder: Footer -->
+    <div id="footer-placeholder"></div>
+  </body>
+</html>
